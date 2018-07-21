@@ -16,6 +16,7 @@
 		202458E9201045CA00BAA971 /* MGesViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 202458E8201045CA00BAA971 /* MGesViewTests.m */; };
 		202458F4201045CA00BAA971 /* MGesViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 202458F3201045CA00BAA971 /* MGesViewUITests.m */; };
 		20245903201045E500BAA971 /* MGesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20245902201045E500BAA971 /* MGesView.m */; };
+		204F07CC20F5A0B600413BED /* MLClickTimeBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 204F07CB20F5A0B600413BED /* MLClickTimeBtn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		202458F5201045CA00BAA971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20245901201045E500BAA971 /* MGesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGesView.h; sourceTree = "<group>"; };
 		20245902201045E500BAA971 /* MGesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGesView.m; sourceTree = "<group>"; };
+		204F07CA20F5A0B600413BED /* MLClickTimeBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLClickTimeBtn.h; sourceTree = "<group>"; };
+		204F07CB20F5A0B600413BED /* MLClickTimeBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLClickTimeBtn.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 			children = (
 				20245901201045E500BAA971 /* MGesView.h */,
 				20245902201045E500BAA971 /* MGesView.m */,
+				204F07CA20F5A0B600413BED /* MLClickTimeBtn.h */,
+				204F07CB20F5A0B600413BED /* MLClickTimeBtn.m */,
 				202458CF201045CA00BAA971 /* AppDelegate.h */,
 				202458D0201045CA00BAA971 /* AppDelegate.m */,
 				202458D2201045CA00BAA971 /* ViewController.h */,
@@ -271,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20245903201045E500BAA971 /* MGesView.m in Sources */,
+				204F07CC20F5A0B600413BED /* MLClickTimeBtn.m in Sources */,
 				202458D4201045CA00BAA971 /* ViewController.m in Sources */,
 				202458DF201045CA00BAA971 /* main.m in Sources */,
 				202458D1201045CA00BAA971 /* AppDelegate.m in Sources */,

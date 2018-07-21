@@ -20,4 +20,15 @@
     return view;
 }
 
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
+{
+    /*
+     if(point在红色按钮的范围内)
+     {
+         return NO;
+     }
+     */
+    return YES;
+}
+
 @end

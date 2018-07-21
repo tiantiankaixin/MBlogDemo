@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1ECB2F27963B8D5C7AB74BAB /* libPods-MSDWebImageStudyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC18994C5E3A8071431F6FB /* libPods-MSDWebImageStudyTests.a */; };
+		2063B6E420BFCABA00E105F3 /* MyImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063B6E320BFCABA00E105F3 /* MyImageView.m */; };
+		207AC221201EF96300314779 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 207AC220201EF96300314779 /* AppDelegate.m */; };
+		207AC224201EF96300314779 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 207AC223201EF96300314779 /* ViewController.m */; };
+		207AC227201EF96300314779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207AC225201EF96300314779 /* Main.storyboard */; };
+		207AC229201EF96300314779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207AC228201EF96300314779 /* Assets.xcassets */; };
+		207AC22C201EF96300314779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207AC22A201EF96300314779 /* LaunchScreen.storyboard */; };
+		207AC22F201EF96300314779 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 207AC22E201EF96300314779 /* main.m */; };
+		207AC239201EF96300314779 /* MSDWebImageStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 207AC238201EF96300314779 /* MSDWebImageStudyTests.m */; };
+		207AC244201EF96400314779 /* MSDWebImageStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 207AC243201EF96400314779 /* MSDWebImageStudyUITests.m */; };
+		24A623D7DE1DC26498317D29 /* libPods-MSDWebImageStudyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13608D74127AE043B075C32E /* libPods-MSDWebImageStudyUITests.a */; };
+		8F513A38E0CDB973AC436AED /* libPods-MSDWebImageStudy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE35A4AB503EACFF6EC7EE0 /* libPods-MSDWebImageStudy.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		207AC235201EF96300314779 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 207AC214201EF96300314779 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 207AC21B201EF96300314779;
+			remoteInfo = MSDWebImageStudy;
+		};
+		207AC240201EF96400314779 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 207AC214201EF96300314779 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 207AC21B201EF96300314779;
+			remoteInfo = MSDWebImageStudy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13608D74127AE043B075C32E /* libPods-MSDWebImageStudyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSDWebImageStudyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2063B6E220BFCABA00E105F3 /* MyImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyImageView.h; sourceTree = "<group>"; };
+		2063B6E320BFCABA00E105F3 /* MyImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyImageView.m; sourceTree = "<group>"; };
+		207AC21C201EF96300314779 /* MSDWebImageStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSDWebImageStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		207AC21F201EF96300314779 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		207AC220201EF96300314779 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		207AC222201EF96300314779 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		207AC223201EF96300314779 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		207AC226201EF96300314779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		207AC228201EF96300314779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		207AC22B201EF96300314779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		207AC22D201EF96300314779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207AC22E201EF96300314779 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		207AC234201EF96300314779 /* MSDWebImageStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSDWebImageStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		207AC238201EF96300314779 /* MSDWebImageStudyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSDWebImageStudyTests.m; sourceTree = "<group>"; };
+		207AC23A201EF96300314779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207AC23F201EF96400314779 /* MSDWebImageStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSDWebImageStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		207AC243201EF96400314779 /* MSDWebImageStudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSDWebImageStudyUITests.m; sourceTree = "<group>"; };
+		207AC245201EF96400314779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C5CF0FBCDC0F02F29B809C8 /* Pods-MSDWebImageStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDWebImageStudyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSDWebImageStudyUITests/Pods-MSDWebImageStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3CE1443457655B95EFEF1AAE /* Pods-MSDWebImageStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDWebImageStudyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSDWebImageStudyTests/Pods-MSDWebImageStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4A758828F16444EE274A5C58 /* Pods-MSDWebImageStudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDWebImageStudyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSDWebImageStudyTests/Pods-MSDWebImageStudyTests.release.xcconfig"; sourceTree = "<group>"; };
+		5BE35A4AB503EACFF6EC7EE0 /* libPods-MSDWebImageStudy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSDWebImageStudy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AA73F5D94381D8C432B0937 /* Pods-MSDWebImageStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDWebImageStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSDWebImageStudy/Pods-MSDWebImageStudy.release.xcconfig"; sourceTree = "<group>"; };
+		B9EFFBE20260481DB908383E /* Pods-MSDWebImageStudyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDWebImageStudyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSDWebImageStudyUITests/Pods-MSDWebImageStudyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BAC18994C5E3A8071431F6FB /* libPods-MSDWebImageStudyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSDWebImageStudyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39C8BD422327B781DC94B6A /* Pods-MSDWebImageStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDWebImageStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSDWebImageStudy/Pods-MSDWebImageStudy.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		207AC219201EF96300314779 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F513A38E0CDB973AC436AED /* libPods-MSDWebImageStudy.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207AC231201EF96300314779 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ECB2F27963B8D5C7AB74BAB /* libPods-MSDWebImageStudyTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207AC23C201EF96400314779 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A623D7DE1DC26498317D29 /* libPods-MSDWebImageStudyUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09B063E0E9F619F79F7D6E4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BE35A4AB503EACFF6EC7EE0 /* libPods-MSDWebImageStudy.a */,
+				BAC18994C5E3A8071431F6FB /* libPods-MSDWebImageStudyTests.a */,
+				13608D74127AE043B075C32E /* libPods-MSDWebImageStudyUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		207AC213201EF96300314779 = {
+			isa = PBXGroup;
+			children = (
+				207AC21E201EF96300314779 /* MSDWebImageStudy */,
+				207AC237201EF96300314779 /* MSDWebImageStudyTests */,
+				207AC242201EF96400314779 /* MSDWebImageStudyUITests */,
+				207AC21D201EF96300314779 /* Products */,
+				36A80FF0DFC8A1E486CB14C5 /* Pods */,
+				09B063E0E9F619F79F7D6E4C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		207AC21D201EF96300314779 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				207AC21C201EF96300314779 /* MSDWebImageStudy.app */,
+				207AC234201EF96300314779 /* MSDWebImageStudyTests.xctest */,
+				207AC23F201EF96400314779 /* MSDWebImageStudyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		207AC21E201EF96300314779 /* MSDWebImageStudy */ = {
+			isa = PBXGroup;
+			children = (
+				207AC21F201EF96300314779 /* AppDelegate.h */,
+				207AC220201EF96300314779 /* AppDelegate.m */,
+				2063B6E220BFCABA00E105F3 /* MyImageView.h */,
+				2063B6E320BFCABA00E105F3 /* MyImageView.m */,
+				207AC222201EF96300314779 /* ViewController.h */,
+				207AC223201EF96300314779 /* ViewController.m */,
+				207AC225201EF96300314779 /* Main.storyboard */,
+				207AC228201EF96300314779 /* Assets.xcassets */,
+				207AC22A201EF96300314779 /* LaunchScreen.storyboard */,
+				207AC22D201EF96300314779 /* Info.plist */,
+				207AC22E201EF96300314779 /* main.m */,
+			);
+			path = MSDWebImageStudy;
+			sourceTree = "<group>";
+		};
+		207AC237201EF96300314779 /* MSDWebImageStudyTests */ = {
+			isa = PBXGroup;
+			children = (
+				207AC238201EF96300314779 /* MSDWebImageStudyTests.m */,
+				207AC23A201EF96300314779 /* Info.plist */,
+			);
+			path = MSDWebImageStudyTests;
+			sourceTree = "<group>";
+		};
+		207AC242201EF96400314779 /* MSDWebImageStudyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				207AC243201EF96400314779 /* MSDWebImageStudyUITests.m */,
+				207AC245201EF96400314779 /* Info.plist */,
+			);
+			path = MSDWebImageStudyUITests;
+			sourceTree = "<group>";
+		};
+		36A80FF0DFC8A1E486CB14C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D39C8BD422327B781DC94B6A /* Pods-MSDWebImageStudy.debug.xcconfig */,
+				7AA73F5D94381D8C432B0937 /* Pods-MSDWebImageStudy.release.xcconfig */,
+				3CE1443457655B95EFEF1AAE /* Pods-MSDWebImageStudyTests.debug.xcconfig */,
+				4A758828F16444EE274A5C58 /* Pods-MSDWebImageStudyTests.release.xcconfig */,
+				B9EFFBE20260481DB908383E /* Pods-MSDWebImageStudyUITests.debug.xcconfig */,
+				2C5CF0FBCDC0F02F29B809C8 /* Pods-MSDWebImageStudyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		207AC21B201EF96300314779 /* MSDWebImageStudy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207AC248201EF96400314779 /* Build configuration list for PBXNativeTarget "MSDWebImageStudy" */;
+			buildPhases = (
+				ABBD21C2683D28E02814B51A /* [CP] Check Pods Manifest.lock */,
+				207AC218201EF96300314779 /* Sources */,
+				207AC219201EF96300314779 /* Frameworks */,
+				207AC21A201EF96300314779 /* Resources */,
+				EA5BFB9B9258937E0C079385 /* [CP] Embed Pods Frameworks */,
+				E4FD532C8ADB9046492C50CA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MSDWebImageStudy;
+			productName = MSDWebImageStudy;
+			productReference = 207AC21C201EF96300314779 /* MSDWebImageStudy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		207AC233201EF96300314779 /* MSDWebImageStudyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207AC24B201EF96400314779 /* Build configuration list for PBXNativeTarget "MSDWebImageStudyTests" */;
+			buildPhases = (
+				D1249E503F06BC252A9074C6 /* [CP] Check Pods Manifest.lock */,
+				207AC230201EF96300314779 /* Sources */,
+				207AC231201EF96300314779 /* Frameworks */,
+				207AC232201EF96300314779 /* Resources */,
+				F8B9568478C74B27D2FED017 /* [CP] Embed Pods Frameworks */,
+				D68F6594A67960736CD0516C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				207AC236201EF96300314779 /* PBXTargetDependency */,
+			);
+			name = MSDWebImageStudyTests;
+			productName = MSDWebImageStudyTests;
+			productReference = 207AC234201EF96300314779 /* MSDWebImageStudyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		207AC23E201EF96400314779 /* MSDWebImageStudyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207AC24E201EF96400314779 /* Build configuration list for PBXNativeTarget "MSDWebImageStudyUITests" */;
+			buildPhases = (
+				8D6591D1572BB25D79DFB74E /* [CP] Check Pods Manifest.lock */,
+				207AC23B201EF96400314779 /* Sources */,
+				207AC23C201EF96400314779 /* Frameworks */,
+				207AC23D201EF96400314779 /* Resources */,
+				F56EBEA4AB96C6DB66C3F9A6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				207AC241201EF96400314779 /* PBXTargetDependency */,
+			);
+			name = MSDWebImageStudyUITests;
+			productName = MSDWebImageStudyUITests;
+			productReference = 207AC23F201EF96400314779 /* MSDWebImageStudyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		207AC214201EF96300314779 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = mal;
+				TargetAttributes = {
+					207AC21B201EF96300314779 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					207AC233201EF96300314779 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 207AC21B201EF96300314779;
+					};
+					207AC23E201EF96400314779 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 207AC21B201EF96300314779;
+					};
+				};
+			};
+			buildConfigurationList = 207AC217201EF96300314779 /* Build configuration list for PBXProject "MSDWebImageStudy" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 207AC213201EF96300314779;
+			productRefGroup = 207AC21D201EF96300314779 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				207AC21B201EF96300314779 /* MSDWebImageStudy */,
+				207AC233201EF96300314779 /* MSDWebImageStudyTests */,
+				207AC23E201EF96400314779 /* MSDWebImageStudyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		207AC21A201EF96300314779 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207AC22C201EF96300314779 /* LaunchScreen.storyboard in Resources */,
+				207AC229201EF96300314779 /* Assets.xcassets in Resources */,
+				207AC227201EF96300314779 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207AC232201EF96300314779 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207AC23D201EF96400314779 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D6591D1572BB25D79DFB74E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ABBD21C2683D28E02814B51A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D1249E503F06BC252A9074C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D68F6594A67960736CD0516C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSDWebImageStudyTests/Pods-MSDWebImageStudyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4FD532C8ADB9046492C50CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSDWebImageStudy/Pods-MSDWebImageStudy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA5BFB9B9258937E0C079385 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSDWebImageStudy/Pods-MSDWebImageStudy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F56EBEA4AB96C6DB66C3F9A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSDWebImageStudyUITests/Pods-MSDWebImageStudyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8B9568478C74B27D2FED017 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSDWebImageStudyTests/Pods-MSDWebImageStudyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		207AC218201EF96300314779 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2063B6E420BFCABA00E105F3 /* MyImageView.m in Sources */,
+				207AC224201EF96300314779 /* ViewController.m in Sources */,
+				207AC22F201EF96300314779 /* main.m in Sources */,
+				207AC221201EF96300314779 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207AC230201EF96300314779 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207AC239201EF96300314779 /* MSDWebImageStudyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207AC23B201EF96400314779 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207AC244201EF96400314779 /* MSDWebImageStudyUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		207AC236201EF96300314779 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 207AC21B201EF96300314779 /* MSDWebImageStudy */;
+			targetProxy = 207AC235201EF96300314779 /* PBXContainerItemProxy */;
+		};
+		207AC241201EF96400314779 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 207AC21B201EF96300314779 /* MSDWebImageStudy */;
+			targetProxy = 207AC240201EF96400314779 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		207AC225201EF96300314779 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				207AC226201EF96300314779 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		207AC22A201EF96300314779 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				207AC22B201EF96300314779 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		207AC246201EF96400314779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		207AC247201EF96400314779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		207AC249201EF96400314779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D39C8BD422327B781DC94B6A /* Pods-MSDWebImageStudy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MSDWebImageStudy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liang.MSDWebImageStudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		207AC24A201EF96400314779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AA73F5D94381D8C432B0937 /* Pods-MSDWebImageStudy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MSDWebImageStudy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liang.MSDWebImageStudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		207AC24C201EF96400314779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CE1443457655B95EFEF1AAE /* Pods-MSDWebImageStudyTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MSDWebImageStudyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liang.MSDWebImageStudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MSDWebImageStudy.app/MSDWebImageStudy";
+			};
+			name = Debug;
+		};
+		207AC24D201EF96400314779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A758828F16444EE274A5C58 /* Pods-MSDWebImageStudyTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MSDWebImageStudyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liang.MSDWebImageStudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MSDWebImageStudy.app/MSDWebImageStudy";
+			};
+			name = Release;
+		};
+		207AC24F201EF96400314779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9EFFBE20260481DB908383E /* Pods-MSDWebImageStudyUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MSDWebImageStudyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liang.MSDWebImageStudyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MSDWebImageStudy;
+			};
+			name = Debug;
+		};
+		207AC250201EF96400314779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C5CF0FBCDC0F02F29B809C8 /* Pods-MSDWebImageStudyUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MSDWebImageStudyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liang.MSDWebImageStudyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MSDWebImageStudy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		207AC217201EF96300314779 /* Build configuration list for PBXProject "MSDWebImageStudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207AC246201EF96400314779 /* Debug */,
+				207AC247201EF96400314779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		207AC248201EF96400314779 /* Build configuration list for PBXNativeTarget "MSDWebImageStudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207AC249201EF96400314779 /* Debug */,
+				207AC24A201EF96400314779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		207AC24B201EF96400314779 /* Build configuration list for PBXNativeTarget "MSDWebImageStudyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207AC24C201EF96400314779 /* Debug */,
+				207AC24D201EF96400314779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		207AC24E201EF96400314779 /* Build configuration list for PBXNativeTarget "MSDWebImageStudyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207AC24F201EF96400314779 /* Debug */,
+				207AC250201EF96400314779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 207AC214201EF96300314779 /* Project object */;
+}

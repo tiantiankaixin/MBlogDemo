@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MGesView.h"
+#import "MLClickTimeBtn.h"
 
 @interface ViewController ()
 
@@ -37,7 +38,20 @@
     [self.gesView2 addSubview:blueBtn];
     self.gesView2.str = @"gesView2";
     [self.view addSubview:self.gesView2];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    MLClickTimeBtn *clikTimeBtn = [[MLClickTimeBtn alloc] initWithFrame:CGRectMake(100, 400, 100, 100)];
+    clikTimeBtn.backgroundColor = [UIColor grayColor];
+    [clikTimeBtn addTarget:self action:@selector(testClickWithSender:) forControlEvents:(UIControlEventTouchUpInside)];
+    clikTimeBtn.clickInterVal = 2;
+    [self.view addSubview:clikTimeBtn];
+}
+
+- (void)testClickWithSender:(MLClickTimeBtn *)btn
+{
+    if ([btn clickCheck])
+    {
+       NSLog(@"按钮被点击了");
+    }
 }
 
 - (void)redBtnClick
