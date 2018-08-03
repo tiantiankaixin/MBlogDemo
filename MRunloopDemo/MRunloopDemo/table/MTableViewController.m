@@ -7,10 +7,14 @@
 //
 
 #import "MTableViewController.h"
+#import "SMKtvMsgQueue.h"
 
-@interface MTableViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface MTableViewController ()<UITableViewDataSource,UITableViewDelegate,SMKtvMsgQueueDelegate>
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, strong) NSTimer *createMsgTimer;
+@property (nonatomic, strong) SMKtvMsgQueue *msgQueue;
+@property (nonatomic, assign) BOOL currentIsInBottom;
 
 @end
 
@@ -26,12 +30,21 @@
     return _dataSource;
 }
 
+- (SMKtvMsgQueue *)msgQueue
+{
+    if (_msgQueue == nil)
+    {
+        _msgQueue = [SMKtvMsgQueue queueWithDelegate:self];
+    }
+    return _msgQueue;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setUpDataSource];
     [self setUpView];
-    [self setUpRunloop];
+    [self startCreateMsgs];
+    //[self addRunloopObserver];
 }
 
 - (void)setUpView
@@ -39,47 +52,114 @@
     [self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
-- (void)setUpRunloop
+- (void)startCreateMsgs
 {
-    [self addRunloopObserver];
+    self.createMsgTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(createMsgs) userInfo:nil repeats:YES];
 }
 
-- (void)setUpDataSource
+- (void)createMsgs
 {
-    
+    sm_runInMainQueue(^{
+        
+        static NSInteger loc = 0;
+        for (int i = 0; i < 50; i++)
+        {
+            loc++;
+            NSString *str = [NSString stringWithFormat:@"%ld",(long)loc];
+            [self.msgQueue sm_insertMsgs:@[str]];
+        }
+    });
 }
 
 //MARK: UITableViewDelegate,UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 30;
+    return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+    NSString *text = self.dataSource[indexPath.row];
+    cell.textLabel.text = text;
     return cell;
 }
 
-//MARK: runloop
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat height = scrollView.frame.size.height;
+    CGFloat contentOffsetY = scrollView.contentOffset.y;
+    CGFloat bottomOffset = scrollView.contentSize.height - contentOffsetY;
+    if (bottomOffset <= height)
+    {
+        //在最底部
+        self.currentIsInBottom = YES;
+    }
+    else
+    {
+        self.currentIsInBottom = NO;
+    }
+}
+
+
+ - (void)sm_popMsgs:(NSArray *)msgs
+{
+    sm_runInMainQueue(^{
+
+        if ([msgs count] > 0)
+        {
+            NSInteger loc = self.dataSource.count;
+            NSMutableArray *indexPaths = [NSMutableArray array];
+            for (int i = 0; i < msgs.count; i++)
+            {
+                NSIndexPath *path = [NSIndexPath indexPathForRow:loc + i inSection:0];
+                [indexPaths addObject:path];
+            }
+            [self.dataSource addObjectsFromArray:msgs];
+            [CATransaction begin];
+            [CATransaction setDisableActions:YES];
+            [self.tableview insertRowsAtIndexPaths:indexPaths withRowAnimation:(UITableViewRowAnimationNone)];
+            [CATransaction commit];
+            if ([self currentIsInBottom])
+            {
+                 [self.tableview scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.dataSource.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:YES];
+            }
+        }
+    });
+}
+
 - (void)addRunloopObserver
 {
     CFRunLoopRef runloopRef = CFRunLoopGetCurrent();
     CFRunLoopActivity activity = kCFRunLoopBeforeWaiting;
     CFRunLoopObserverRef observerRef = CFRunLoopObserverCreateWithHandler(CFAllocatorGetDefault(), activity, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
-        
-        NSLog(@"kkkk");
+
+        if (activity == kCFRunLoopBeforeWaiting)
+        {
+            NSLog(@"kCFRunLoopBeforeWaiting");
+        }
     });
     CFRunLoopAddObserver(runloopRef, observerRef, kCFRunLoopDefaultMode);
 }
 
-- (void)didReceiveMemoryWarning
+- (void)dealloc
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.msgQueue releaseQueue];
 }
 
-
+void sm_runInMainQueue(dispatch_block_t block)
+{
+    if ([NSThread isMainThread])
+    {
+        block();
+    }
+    else
+    {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
 
 @end
+
+
