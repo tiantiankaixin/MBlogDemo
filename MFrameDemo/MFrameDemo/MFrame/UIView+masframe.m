@@ -1,12 +1,12 @@
 //
-//  MSetFrame.m
-//  UnitTest
+//  UIView+masframe.m
+//  MFrameDemo
 //
 //  Created by mal on 2018/8/28.
 //  Copyright © 2018年 mal. All rights reserved.
 //
 
-#import "MSetFrame.h"
+#import "UIView+masframe.h"
 #import "UIView+mframe.h"
 
 typedef NS_ENUM(NSInteger, MHandleType){
@@ -19,47 +19,56 @@ typedef NS_ENUM(NSInteger, MHandleType){
     MH_HEIGHT = 1005,
 };
 
-@implementation MSetFrame
+@implementation UIView (masframe)
 
 //MARK: - -----------------get & set
 - (NSMutableArray *)handleArray
 {
-    if (_handleArray == nil)
+    static NSMutableArray *array = nil;
+    if (array == nil)
     {
-        _handleArray = [NSMutableArray arrayWithCapacity:4];
+        array = [NSMutableArray array];
     }
-    return _handleArray;
+    return array;
 }
 
-//MARK: - public function
-- (MSetFrame *)left
+//MARK: -
+- (UIView *)left
 {
     return [self m_addHandleWithType:MH_LEFT];
 }
 
-- (MSetFrame *)right
+- (UIView *)right
 {
     return [self m_addHandleWithType:MH_RIGHT];
 }
 
-- (MSetFrame *)top
+- (UIView *)top
 {
     return [self m_addHandleWithType:MH_TOP];
 }
 
-- (MSetFrame *)bottom
+- (UIView *)bottom
 {
     return [self m_addHandleWithType:MH_BOTTOM];
 }
 
-- (MSetFrame *)width
+- (UIView *)width
 {
     return [self m_addHandleWithType:MH_WIDTH];
 }
 
-- (MSetFrame *)height
+- (UIView *)height
 {
     return [self m_addHandleWithType:MH_HEIGHT];
+}
+
+//MARK: -
+- (UIView *)m_addHandleWithType:(MHandleType)type
+{
+    NSNumber *typeNum = [NSNumber numberWithInteger:type];
+    [self.handleArray addObject:typeNum];
+    return self;
 }
 
 - (void (^)(NSArray *))m_equal
@@ -67,9 +76,9 @@ typedef NS_ENUM(NSInteger, MHandleType){
     //MSetFrame本身并没有持有这个block，所以在block里访问self没有循环引用。
     return ^(NSArray *pa){
         
-        #ifdef DEBUG
+    #ifdef DEBUG
         NSAssert(pa.count == self.handleArray.count, @"MSetFrame参数个数有问题");
-        #endif
+    #endif
         
         if (pa.count == self.handleArray.count)
         {
@@ -79,15 +88,8 @@ typedef NS_ENUM(NSInteger, MHandleType){
                 [self m_setValue:pa[i] type:type];
             }
         }
+        [self.handleArray removeAllObjects];
     };
-}
-
-//MARK: - MFrameHandleDelegate
-- (MSetFrame *)m_addHandleWithType:(MHandleType)type
-{
-    NSNumber *typeNum = [NSNumber numberWithInteger:type];
-    [self.handleArray addObject:typeNum];
-    return self;
 }
 
 - (void)m_setValue:(NSNumber *)value type:(MHandleType)type
@@ -97,42 +99,37 @@ typedef NS_ENUM(NSInteger, MHandleType){
     {
         case MH_LEFT:
         {
-            self.view.m_left = floatValue;
+            self.m_left = floatValue;
             break;
         }
         case MH_RIGHT:
         {
-            self.view.m_right = floatValue;
+            self.m_right = floatValue;
             break;
         }
         case MH_TOP:
         {
-            self.view.m_top = floatValue;
+            self.m_top = floatValue;
             break;
         }
         case MH_BOTTOM:
         {
-            self.view.m_bottom = floatValue;
+            self.m_bottom = floatValue;
             break;
         }
         case MH_WIDTH:
         {
-            self.view.m_width = floatValue;
+            self.m_width = floatValue;
             break;
         }
         case MH_HEIGHT:
         {
-            self.view.m_height = floatValue;
+            self.m_height = floatValue;
             break;
         }
         default:
             break;
     }
-}
-
-- (void)dealloc
-{
-    NSLog(@"MSetFrame dealloc");
 }
 
 @end

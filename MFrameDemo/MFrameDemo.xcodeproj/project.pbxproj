@@ -17,8 +17,8 @@
 		20BFFBF921353ECB00551C4A /* MFrameDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFBF821353ECB00551C4A /* MFrameDemoUITests.m */; };
 		20BFFC0F21353EDD00551C4A /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFC0721353EDD00551C4A /* UIView+frame.m */; };
 		20BFFC1021353EDD00551C4A /* UIView+mframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFC0821353EDD00551C4A /* UIView+mframe.m */; };
-		20BFFC1121353EDD00551C4A /* MFrameHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFC0A21353EDD00551C4A /* MFrameHandle.m */; };
 		20BFFC1221353EDD00551C4A /* MSetFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFC0B21353EDD00551C4A /* MSetFrame.m */; };
+		20BFFC152135534000551C4A /* UIView+masframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFC142135534000551C4A /* UIView+masframe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +58,11 @@
 		20BFFC0721353EDD00551C4A /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		20BFFC0821353EDD00551C4A /* UIView+mframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+mframe.m"; sourceTree = "<group>"; };
 		20BFFC0921353EDD00551C4A /* MSetFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSetFrame.h; sourceTree = "<group>"; };
-		20BFFC0A21353EDD00551C4A /* MFrameHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFrameHandle.m; sourceTree = "<group>"; };
 		20BFFC0B21353EDD00551C4A /* MSetFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSetFrame.m; sourceTree = "<group>"; };
 		20BFFC0C21353EDD00551C4A /* UIView+mframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+mframe.h"; sourceTree = "<group>"; };
 		20BFFC0D21353EDD00551C4A /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
-		20BFFC0E21353EDD00551C4A /* MFrameHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFrameHandle.h; sourceTree = "<group>"; };
+		20BFFC132135534000551C4A /* UIView+masframe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+masframe.h"; sourceTree = "<group>"; };
+		20BFFC142135534000551C4A /* UIView+masframe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+masframe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +154,8 @@
 				20BFFC0721353EDD00551C4A /* UIView+frame.m */,
 				20BFFC0921353EDD00551C4A /* MSetFrame.h */,
 				20BFFC0B21353EDD00551C4A /* MSetFrame.m */,
-				20BFFC0E21353EDD00551C4A /* MFrameHandle.h */,
-				20BFFC0A21353EDD00551C4A /* MFrameHandle.m */,
+				20BFFC132135534000551C4A /* UIView+masframe.h */,
+				20BFFC142135534000551C4A /* UIView+masframe.m */,
 			);
 			path = MFrame;
 			sourceTree = "<group>";
@@ -294,9 +294,9 @@
 				20BFFC1221353EDD00551C4A /* MSetFrame.m in Sources */,
 				20BFFC0F21353EDD00551C4A /* UIView+frame.m in Sources */,
 				20BFFBD921353EC800551C4A /* ViewController.m in Sources */,
+				20BFFC152135534000551C4A /* UIView+masframe.m in Sources */,
 				20BFFBE421353ECA00551C4A /* main.m in Sources */,
 				20BFFBD621353EC800551C4A /* AppDelegate.m in Sources */,
-				20BFFC1121353EDD00551C4A /* MFrameHandle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

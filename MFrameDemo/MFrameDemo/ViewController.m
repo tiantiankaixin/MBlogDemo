@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+masframe.h"
 #import "UIView+frame.h"
 
 @interface ViewController ()
@@ -21,14 +22,16 @@
     UIView *redView = [[UIView alloc] init];
     redView.backgroundColor = [UIColor redColor];
     NSArray *array = @[@50,@70,@100,@100];
-    redView.mset.left.top.width.height.m_equal(array);
-    redView.mset.width.height.m_equal(@[@200,@100]);
+    redView.left.top.width.height.m_equal(array);
+    redView.width.height.m_equal(@[@200,@100]);
+    redView.mset.width.m_equal(@[@300]);
     [self.view addSubview:redView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

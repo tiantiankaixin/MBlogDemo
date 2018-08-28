@@ -7,19 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MFrameHandle.h"
+#import <UIKit/UIKit.h>
 
-@interface MSetFrame : NSObject<MFrameHandleDelegate>
+@interface MSetFrame : NSObject
 
 @property (nonatomic, strong) NSMutableArray *handleArray;
 @property (nonatomic, weak) UIView *view;
 
-- (MFrameHandle *)left;
-- (MFrameHandle *)right;
-- (MFrameHandle *)top;
-- (MFrameHandle *)bottom;
-- (MFrameHandle *)width;
-- (MFrameHandle *)height;
+- (MSetFrame *)left;
+- (MSetFrame *)right;
+- (MSetFrame *)top;
+- (MSetFrame *)bottom;
+- (MSetFrame *)width;
+- (MSetFrame *)height;
 
 - (void(^)(NSArray *))m_equal;
 
