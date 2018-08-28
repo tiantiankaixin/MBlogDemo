@@ -15,6 +15,13 @@
 		20BE6FF12043FBED00BD9CC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BE6FF02043FBED00BD9CC1 /* main.m */; };
 		20BE6FFB2043FBEE00BD9CC1 /* UnitTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BE6FFA2043FBEE00BD9CC1 /* UnitTestTests.m */; };
 		20BE70062043FBEE00BD9CC1 /* UnitTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BE70052043FBEE00BD9CC1 /* UnitTestUITests.m */; };
+		20BFFB44211D432200551C4A /* MLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFB43211D432100551C4A /* MLogManager.m */; };
+		20BFFB912126D87F00551C4A /* UIImage+help.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFB902126D87F00551C4A /* UIImage+help.m */; };
+		20BFFB962126E0EC00551C4A /* background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BFFB952126E0EC00551C4A /* background@3x.png */; };
+		20BFFBB62135247800551C4A /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFBB52135247800551C4A /* UIView+frame.m */; };
+		20BFFBBC213525F500551C4A /* MFrameHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFBBB213525F500551C4A /* MFrameHandle.m */; };
+		20BFFBBF2135295400551C4A /* MSetFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFBBE2135295400551C4A /* MSetFrame.m */; };
+		20BFFBC72135344600551C4A /* UIView+mframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFBC62135344600551C4A /* UIView+mframe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,19 @@
 		20BE70012043FBEE00BD9CC1 /* UnitTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BE70052043FBEE00BD9CC1 /* UnitTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTestUITests.m; sourceTree = "<group>"; };
 		20BE70072043FBEE00BD9CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20BFFB42211D432100551C4A /* MLogManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLogManager.h; sourceTree = "<group>"; };
+		20BFFB43211D432100551C4A /* MLogManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLogManager.m; sourceTree = "<group>"; };
+		20BFFB8F2126D87F00551C4A /* UIImage+help.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+help.h"; sourceTree = "<group>"; };
+		20BFFB902126D87F00551C4A /* UIImage+help.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+help.m"; sourceTree = "<group>"; };
+		20BFFB952126E0EC00551C4A /* background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@3x.png"; sourceTree = "<group>"; };
+		20BFFBB42135247800551C4A /* UIView+frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
+		20BFFBB52135247800551C4A /* UIView+frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
+		20BFFBBA213525F500551C4A /* MFrameHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFrameHandle.h; sourceTree = "<group>"; };
+		20BFFBBB213525F500551C4A /* MFrameHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFrameHandle.m; sourceTree = "<group>"; };
+		20BFFBBD2135295400551C4A /* MSetFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSetFrame.h; sourceTree = "<group>"; };
+		20BFFBBE2135295400551C4A /* MSetFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSetFrame.m; sourceTree = "<group>"; };
+		20BFFBC52135344500551C4A /* UIView+mframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+mframe.h"; sourceTree = "<group>"; };
+		20BFFBC62135344600551C4A /* UIView+mframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+mframe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +121,16 @@
 		20BE6FE02043FBED00BD9CC1 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				20BFFB952126E0EC00551C4A /* background@3x.png */,
+				20BFFB8F2126D87F00551C4A /* UIImage+help.h */,
+				20BFFB902126D87F00551C4A /* UIImage+help.m */,
 				20BE6FE12043FBED00BD9CC1 /* AppDelegate.h */,
 				20BE6FE22043FBED00BD9CC1 /* AppDelegate.m */,
+				20BFFB42211D432100551C4A /* MLogManager.h */,
+				20BFFB43211D432100551C4A /* MLogManager.m */,
 				20BE6FE42043FBED00BD9CC1 /* ViewController.h */,
 				20BE6FE52043FBED00BD9CC1 /* ViewController.m */,
+				20BFFBC42135342300551C4A /* MFrame */,
 				20BE6FE72043FBED00BD9CC1 /* Main.storyboard */,
 				20BE6FEA2043FBED00BD9CC1 /* Assets.xcassets */,
 				20BE6FEC2043FBED00BD9CC1 /* LaunchScreen.storyboard */,
@@ -130,6 +156,21 @@
 				20BE70072043FBEE00BD9CC1 /* Info.plist */,
 			);
 			path = UnitTestUITests;
+			sourceTree = "<group>";
+		};
+		20BFFBC42135342300551C4A /* MFrame */ = {
+			isa = PBXGroup;
+			children = (
+				20BFFBC52135344500551C4A /* UIView+mframe.h */,
+				20BFFBC62135344600551C4A /* UIView+mframe.m */,
+				20BFFBB42135247800551C4A /* UIView+frame.h */,
+				20BFFBB52135247800551C4A /* UIView+frame.m */,
+				20BFFBBD2135295400551C4A /* MSetFrame.h */,
+				20BFFBBE2135295400551C4A /* MSetFrame.m */,
+				20BFFBBA213525F500551C4A /* MFrameHandle.h */,
+				20BFFBBB213525F500551C4A /* MFrameHandle.m */,
+			);
+			path = MFrame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +281,7 @@
 			files = (
 				20BE6FEE2043FBED00BD9CC1 /* LaunchScreen.storyboard in Resources */,
 				20BE6FEB2043FBED00BD9CC1 /* Assets.xcassets in Resources */,
+				20BFFB962126E0EC00551C4A /* background@3x.png in Resources */,
 				20BE6FE92043FBED00BD9CC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,9 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BFFBB62135247800551C4A /* UIView+frame.m in Sources */,
+				20BFFBC72135344600551C4A /* UIView+mframe.m in Sources */,
 				20BE6FE62043FBED00BD9CC1 /* ViewController.m in Sources */,
+				20BFFBBF2135295400551C4A /* MSetFrame.m in Sources */,
 				20BE6FF12043FBED00BD9CC1 /* main.m in Sources */,
+				20BFFB912126D87F00551C4A /* UIImage+help.m in Sources */,
+				20BFFB44211D432200551C4A /* MLogManager.m in Sources */,
 				20BE6FE32043FBED00BD9CC1 /* AppDelegate.m in Sources */,
+				20BFFBBC213525F500551C4A /* MFrameHandle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

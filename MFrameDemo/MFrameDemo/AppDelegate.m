@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  UnitTest
+//  MFrameDemo
 //
-//  Created by mal on 2018/2/26.
+//  Created by mal on 2018/8/28.
 //  Copyright © 2018年 mal. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "MLogManager.h"
 
 @interface AppDelegate ()
 
@@ -16,10 +15,8 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [MLogManager redirectNSLogToDocumentFolder];
     return YES;
 }
 
@@ -49,5 +46,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end
