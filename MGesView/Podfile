@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MGesView' do
+ 
+   pod 'MJExtension', '~> 3.0.15.1'
+
+  target 'MGesViewTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MGesViewUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

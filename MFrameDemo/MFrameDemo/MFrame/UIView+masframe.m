@@ -11,12 +11,12 @@
 
 typedef NS_ENUM(NSInteger, MHandleType){
     
+    MH_WIDTH = 998,
+    MH_HEIGHT = 999,
     MH_LEFT = 1000,
     MH_RIGHT = 1001,
     MH_TOP = 1002,
     MH_BOTTOM = 1003,
-    MH_WIDTH = 1004,
-    MH_HEIGHT = 1005,
 };
 
 @implementation UIView (masframe)
@@ -73,7 +73,7 @@ typedef NS_ENUM(NSInteger, MHandleType){
 
 - (void (^)(NSArray *))m_equal
 {
-    //MSetFrame本身并没有持有这个block，所以在block里访问self没有循环引用。
+    //self本身并没有持有这个block，所以在block里访问self没有循环引用。
     return ^(NSArray *pa){
         
     #ifdef DEBUG
@@ -82,6 +82,7 @@ typedef NS_ENUM(NSInteger, MHandleType){
         
         if (pa.count == self.handleArray.count)
         {
+            [self sortHandle];
             for (int i = 0; i < pa.count; i++)
             {
                 MHandleType type = [self.handleArray[i] integerValue];
@@ -90,6 +91,22 @@ typedef NS_ENUM(NSInteger, MHandleType){
         }
         [self.handleArray removeAllObjects];
     };
+}
+
+- (void)sortHandle
+{
+    [self.handleArray sortUsingComparator:^NSComparisonResult(NSNumber *obj1, NSNumber *obj2) {
+        
+        if (obj1.integerValue < obj2.integerValue)
+        {
+            return NSOrderedAscending;
+        }
+        else if (obj1.integerValue > obj2.integerValue)
+        {
+            return NSOrderedDescending;
+        }
+        return NSOrderedSame;
+    }];
 }
 
 - (void)m_setValue:(NSNumber *)value type:(MHandleType)type

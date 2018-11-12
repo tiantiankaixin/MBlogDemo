@@ -11,12 +11,12 @@
 
 typedef NS_ENUM(NSInteger, MHandleType){
     
+    MH_WIDTH = 998,
+    MH_HEIGHT = 999,
     MH_LEFT = 1000,
     MH_RIGHT = 1001,
     MH_TOP = 1002,
     MH_BOTTOM = 1003,
-    MH_WIDTH = 1004,
-    MH_HEIGHT = 1005,
 };
 
 @implementation MSetFrame
@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, MHandleType){
 {
     if (_handleArray == nil)
     {
-        _handleArray = [NSMutableArray arrayWithCapacity:4];
+        _handleArray = [NSMutableArray array];
     }
     return _handleArray;
 }
@@ -73,6 +73,7 @@ typedef NS_ENUM(NSInteger, MHandleType){
         
         if (pa.count == self.handleArray.count)
         {
+            [self sortHandle];
             for (int i = 0; i < pa.count; i++)
             {
                 MHandleType type = [self.handleArray[i] integerValue];
@@ -80,6 +81,22 @@ typedef NS_ENUM(NSInteger, MHandleType){
             }
         }
     };
+}
+
+- (void)sortHandle
+{
+    [self.handleArray sortUsingComparator:^NSComparisonResult(NSNumber *obj1, NSNumber *obj2) {
+        
+        if (obj1.integerValue < obj2.integerValue)
+        {
+            return NSOrderedAscending;
+        }
+        else if (obj1.integerValue > obj2.integerValue)
+        {
+            return NSOrderedDescending;
+        }
+        return NSOrderedSame;
+    }];
 }
 
 //MARK: - MFrameHandleDelegate

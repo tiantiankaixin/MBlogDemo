@@ -21,8 +21,7 @@
     [super viewDidLoad];
     UIView *redView = [[UIView alloc] init];
     redView.backgroundColor = [UIColor redColor];
-    NSArray *array = @[@50,@70,@100,@100];
-    redView.left.top.width.height.m_equal(array);
+    redView.left.top.width.height.m_equal(@[@10,@20,@100,@100]);
     redView.width.height.m_equal(@[@200,@100]);
     redView.mset.width.m_equal(@[@300]);
     [self.view addSubview:redView];

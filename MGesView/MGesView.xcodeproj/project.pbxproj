@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1385D65DD9EA68BDE3F6A888 /* libPods-MGesViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E28D1EFF91649D96AF3892 /* libPods-MGesViewTests.a */; };
+		16E26774815211E4B4A95DD6 /* libPods-MGesView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6F9BD494B48F58BE14CE23 /* libPods-MGesView.a */; };
 		202458D1201045CA00BAA971 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 202458D0201045CA00BAA971 /* AppDelegate.m */; };
 		202458D4201045CA00BAA971 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 202458D3201045CA00BAA971 /* ViewController.m */; };
 		202458D7201045CA00BAA971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202458D5201045CA00BAA971 /* Main.storyboard */; };
@@ -17,6 +19,7 @@
 		202458F4201045CA00BAA971 /* MGesViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 202458F3201045CA00BAA971 /* MGesViewUITests.m */; };
 		20245903201045E500BAA971 /* MGesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20245902201045E500BAA971 /* MGesView.m */; };
 		204F07CC20F5A0B600413BED /* MLClickTimeBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 204F07CB20F5A0B600413BED /* MLClickTimeBtn.m */; };
+		EE59CDB0D214AF2339A3864A /* libPods-MGesViewUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6022787C1EA2E2BEBA89AD /* libPods-MGesViewUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,15 @@
 		20245902201045E500BAA971 /* MGesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGesView.m; sourceTree = "<group>"; };
 		204F07CA20F5A0B600413BED /* MLClickTimeBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLClickTimeBtn.h; sourceTree = "<group>"; };
 		204F07CB20F5A0B600413BED /* MLClickTimeBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLClickTimeBtn.m; sourceTree = "<group>"; };
+		26E28D1EFF91649D96AF3892 /* libPods-MGesViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MGesViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC9B2AA5B8F420B73857F10 /* Pods-MGesViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGesViewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MGesViewUITests/Pods-MGesViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F6F9BD494B48F58BE14CE23 /* libPods-MGesView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MGesView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A6022787C1EA2E2BEBA89AD /* libPods-MGesViewUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MGesViewUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA98E46BFDA1409BBF70CB5 /* Pods-MGesView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGesView.release.xcconfig"; path = "Pods/Target Support Files/Pods-MGesView/Pods-MGesView.release.xcconfig"; sourceTree = "<group>"; };
+		94D275C807684DB0DE33CCF2 /* Pods-MGesViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGesViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MGesViewUITests/Pods-MGesViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A945A1AADB08EE92C689064C /* Pods-MGesViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGesViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MGesViewTests/Pods-MGesViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C677587D694F76B5A0621497 /* Pods-MGesViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGesViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MGesViewTests/Pods-MGesViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF44638808263CF39A0EF459 /* Pods-MGesView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGesView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MGesView/Pods-MGesView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E26774815211E4B4A95DD6 /* libPods-MGesView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1385D65DD9EA68BDE3F6A888 /* libPods-MGesViewTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE59CDB0D214AF2339A3864A /* libPods-MGesViewUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +106,8 @@
 				202458E7201045CA00BAA971 /* MGesViewTests */,
 				202458F2201045CA00BAA971 /* MGesViewUITests */,
 				202458CD201045CA00BAA971 /* Products */,
+				EEAB9C13D44BB8BDB4B85291 /* Pods */,
+				7FED35752054245128AD710C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +159,29 @@
 			path = MGesViewUITests;
 			sourceTree = "<group>";
 		};
+		7FED35752054245128AD710C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F6F9BD494B48F58BE14CE23 /* libPods-MGesView.a */,
+				26E28D1EFF91649D96AF3892 /* libPods-MGesViewTests.a */,
+				5A6022787C1EA2E2BEBA89AD /* libPods-MGesViewUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEAB9C13D44BB8BDB4B85291 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF44638808263CF39A0EF459 /* Pods-MGesView.debug.xcconfig */,
+				8BA98E46BFDA1409BBF70CB5 /* Pods-MGesView.release.xcconfig */,
+				A945A1AADB08EE92C689064C /* Pods-MGesViewTests.debug.xcconfig */,
+				C677587D694F76B5A0621497 /* Pods-MGesViewTests.release.xcconfig */,
+				2EC9B2AA5B8F420B73857F10 /* Pods-MGesViewUITests.debug.xcconfig */,
+				94D275C807684DB0DE33CCF2 /* Pods-MGesViewUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +189,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 202458F8201045CA00BAA971 /* Build configuration list for PBXNativeTarget "MGesView" */;
 			buildPhases = (
+				5F6A81F7EEF54AB75AD1CC6D /* [CP] Check Pods Manifest.lock */,
 				202458C8201045CA00BAA971 /* Sources */,
 				202458C9201045CA00BAA971 /* Frameworks */,
 				202458CA201045CA00BAA971 /* Resources */,
@@ -166,6 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 202458FB201045CA00BAA971 /* Build configuration list for PBXNativeTarget "MGesViewTests" */;
 			buildPhases = (
+				2CB1DA7AA7C66DD6A6FEA9C3 /* [CP] Check Pods Manifest.lock */,
 				202458E0201045CA00BAA971 /* Sources */,
 				202458E1201045CA00BAA971 /* Frameworks */,
 				202458E2201045CA00BAA971 /* Resources */,
@@ -184,6 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 202458FE201045CA00BAA971 /* Build configuration list for PBXNativeTarget "MGesViewUITests" */;
 			buildPhases = (
+				9138168B9AF96AF5AAAA1E3F /* [CP] Check Pods Manifest.lock */,
 				202458EB201045CA00BAA971 /* Sources */,
 				202458EC201045CA00BAA971 /* Frameworks */,
 				202458ED201045CA00BAA971 /* Resources */,
@@ -269,6 +312,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CB1DA7AA7C66DD6A6FEA9C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MGesViewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F6A81F7EEF54AB75AD1CC6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MGesView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9138168B9AF96AF5AAAA1E3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MGesViewUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		202458C8201045CA00BAA971 /* Sources */ = {
@@ -440,6 +552,7 @@
 		};
 		202458F9201045CA00BAA971 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF44638808263CF39A0EF459 /* Pods-MGesView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +566,7 @@
 		};
 		202458FA201045CA00BAA971 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BA98E46BFDA1409BBF70CB5 /* Pods-MGesView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +580,7 @@
 		};
 		202458FC201045CA00BAA971 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A945A1AADB08EE92C689064C /* Pods-MGesViewTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +595,7 @@
 		};
 		202458FD201045CA00BAA971 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C677587D694F76B5A0621497 /* Pods-MGesViewTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -494,6 +610,7 @@
 		};
 		202458FF201045CA00BAA971 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EC9B2AA5B8F420B73857F10 /* Pods-MGesViewUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MGesViewUITests/Info.plist;
@@ -507,6 +624,7 @@
 		};
 		20245900201045CA00BAA971 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94D275C807684DB0DE33CCF2 /* Pods-MGesViewUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MGesViewUITests/Info.plist;
