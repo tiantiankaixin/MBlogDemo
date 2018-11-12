@@ -82,7 +82,7 @@ typedef NS_ENUM(NSInteger, MHandleType){
         
         if (pa.count == self.handleArray.count)
         {
-            [self sortHandle];
+            //[self sortHandle];
             for (int i = 0; i < pa.count; i++)
             {
                 MHandleType type = [self.handleArray[i] integerValue];
@@ -93,21 +93,21 @@ typedef NS_ENUM(NSInteger, MHandleType){
     };
 }
 
-- (void)sortHandle
-{
-    [self.handleArray sortUsingComparator:^NSComparisonResult(NSNumber *obj1, NSNumber *obj2) {
-        
-        if (obj1.integerValue < obj2.integerValue)
-        {
-            return NSOrderedAscending;
-        }
-        else if (obj1.integerValue > obj2.integerValue)
-        {
-            return NSOrderedDescending;
-        }
-        return NSOrderedSame;
-    }];
-}
+//- (void)sortHandle
+//{
+//    [self.handleArray sortUsingComparator:^NSComparisonResult(NSNumber *obj1, NSNumber *obj2) {
+//
+//        if (obj1.integerValue < obj2.integerValue)
+//        {
+//            return NSOrderedAscending;
+//        }
+//        else if (obj1.integerValue > obj2.integerValue)
+//        {
+//            return NSOrderedDescending;
+//        }
+//        return NSOrderedSame;
+//    }];
+//}
 
 - (void)m_setValue:(NSNumber *)value type:(MHandleType)type
 {

@@ -22,5 +22,6 @@
 - (MSetFrame *)height;
 
 - (void(^)(NSArray *))m_equal;
+- (MSetFrame *(^)(void))m_blockTest;
 
 @end

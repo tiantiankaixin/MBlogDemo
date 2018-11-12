@@ -73,7 +73,7 @@ typedef NS_ENUM(NSInteger, MHandleType){
         
         if (pa.count == self.handleArray.count)
         {
-            [self sortHandle];
+            //[self sortHandle];
             for (int i = 0; i < pa.count; i++)
             {
                 MHandleType type = [self.handleArray[i] integerValue];
@@ -83,21 +83,31 @@ typedef NS_ENUM(NSInteger, MHandleType){
     };
 }
 
-- (void)sortHandle
+//MARK: 测试代码
+- (MSetFrame *(^)(void))m_blockTest
 {
-    [self.handleArray sortUsingComparator:^NSComparisonResult(NSNumber *obj1, NSNumber *obj2) {
+    return ^{
         
-        if (obj1.integerValue < obj2.integerValue)
-        {
-            return NSOrderedAscending;
-        }
-        else if (obj1.integerValue > obj2.integerValue)
-        {
-            return NSOrderedDescending;
-        }
-        return NSOrderedSame;
-    }];
+        return self;
+    };
 }
+
+//FIXME: 设置view的right依赖于view的left和width所以要先设置left、width才能设置right，需要对设置顺序进行排序。
+//- (void)sortHandle
+//{
+//    [self.handleArray sortUsingComparator:^NSComparisonResult(NSNumber *obj1, NSNumber *obj2) {
+//
+//        if (obj1.integerValue < obj2.integerValue)
+//        {
+//            return NSOrderedAscending;
+//        }
+//        else if (obj1.integerValue > obj2.integerValue)
+//        {
+//            return NSOrderedDescending;
+//        }
+//        return NSOrderedSame;
+//    }];
+//}
 
 //MARK: - MFrameHandleDelegate
 - (MSetFrame *)m_addHandleWithType:(MHandleType)type
@@ -150,6 +160,21 @@ typedef NS_ENUM(NSInteger, MHandleType){
 - (void)dealloc
 {
     NSLog(@"MSetFrame dealloc");
+}
+
+- (void)test
+{
+    //1、c函数
+    testFunc();
+    
+    //2、block
+    void(^testBlock)(void) = ^{};
+    testBlock();
+}
+
+void testFunc()
+{
+    
 }
 
 @end
