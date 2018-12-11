@@ -60,6 +60,7 @@
 		20245902201045E500BAA971 /* MGesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGesView.m; sourceTree = "<group>"; };
 		204F07CA20F5A0B600413BED /* MLClickTimeBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLClickTimeBtn.h; sourceTree = "<group>"; };
 		204F07CB20F5A0B600413BED /* MLClickTimeBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLClickTimeBtn.m; sourceTree = "<group>"; };
+		207D84D8219EEB0400AB2281 /* test.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.svga; sourceTree = "<group>"; };
 		26E28D1EFF91649D96AF3892 /* libPods-MGesViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MGesViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC9B2AA5B8F420B73857F10 /* Pods-MGesViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGesViewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MGesViewUITests/Pods-MGesViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F6F9BD494B48F58BE14CE23 /* libPods-MGesView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MGesView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +125,7 @@
 		202458CE201045CA00BAA971 /* MGesView */ = {
 			isa = PBXGroup;
 			children = (
+				207D84D8219EEB0400AB2281 /* test.svga */,
 				20245901201045E500BAA971 /* MGesView.h */,
 				20245902201045E500BAA971 /* MGesView.m */,
 				204F07CA20F5A0B600413BED /* MLClickTimeBtn.h */,

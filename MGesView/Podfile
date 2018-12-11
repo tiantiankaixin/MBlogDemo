@@ -4,6 +4,7 @@
 target 'MGesView' do
  
    pod 'MJExtension', '~> 3.0.15.1'
+pod 'SVGAPlayer'
 
   target 'MGesViewTests' do
     inherit! :search_paths

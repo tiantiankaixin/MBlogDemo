@@ -1,16 +1,33 @@
 PODS:
   - MJExtension (3.0.15.1)
+  - Protobuf (3.6.1)
+  - SSZipArchive (1.8.1)
+  - SVGAPlayer (2.3.0):
+    - SVGAPlayer/Core (= 2.3.0)
+    - SVGAPlayer/ProtoFiles (= 2.3.0)
+  - SVGAPlayer/Core (2.3.0):
+    - SSZipArchive (= 1.8.1)
+    - SVGAPlayer/ProtoFiles
+  - SVGAPlayer/ProtoFiles (2.3.0):
+    - Protobuf (~> 3.4)
 
 DEPENDENCIES:
   - MJExtension (~> 3.0.15.1)
+  - SVGAPlayer
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - MJExtension
+    - Protobuf
+    - SSZipArchive
+    - SVGAPlayer
 
 SPEC CHECKSUMS:
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
+  SVGAPlayer: 39ad3d16643d8c63d62bd8a3decc0de4bc9b66c4
 
-PODFILE CHECKSUM: 9442546924ffa0cf666efbccd7daac32294ae8d7
+PODFILE CHECKSUM: 19f2e92f4a51d4888ee0b803c9a620ef0774334f
 
 COCOAPODS: 1.5.0
