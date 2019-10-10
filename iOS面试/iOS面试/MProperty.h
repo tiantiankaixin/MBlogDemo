@@ -10,6 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol MTestDelegate <NSObject>
+
+- (void)m_test;
+
+@end
+
+
 @interface MProperty : NSObject
 
 @property (nonatomic, copy) NSString *testStr;
