@@ -1,0 +1,10 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+source 'https://gitee.com/wtMal/malpodspecs.git'
+
+target 'MPodTest' do
+ 
+pod 'MNetMonitor', '1.0.1'
+
+end

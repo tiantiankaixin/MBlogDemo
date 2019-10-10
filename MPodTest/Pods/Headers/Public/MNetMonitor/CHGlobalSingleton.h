@@ -1,0 +1,1 @@
+../../../MNetMonitor/lib/CHGlobalSingleton.h
