@@ -1,0 +1,16 @@
+PODS:
+  - MNetMonitor (1.0.2)
+
+DEPENDENCIES:
+  - MNetMonitor (~> 1.0.1)
+
+SPEC REPOS:
+  https://gitee.com/wtMal/malpodspecs.git:
+    - MNetMonitor
+
+SPEC CHECKSUMS:
+  MNetMonitor: df4eada7eb83c6abaa9e388e6c653849bfee642d
+
+PODFILE CHECKSUM: 49414383b8714c6192d1b0b4f34b02c85081ec11
+
+COCOAPODS: 1.7.5
