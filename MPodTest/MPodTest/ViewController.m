@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SecondViewController.h"
+#import <CHGlobalSingleton.h>
 
 @interface ViewController ()<MTestProtocol>
 
@@ -19,6 +20,7 @@
 {
     [super viewDidLoad];
     [[XNGNotificationProxy sharedProxy] registerProtocol:@protocol(MTestProtocol) forObject:self];
+    [CHGlobalSingleton testFunc];
 }
 
 - (void)mt_testfunc
