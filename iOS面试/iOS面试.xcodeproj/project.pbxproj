@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049B102423272B2600AC00D1 /* MLoadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B102323272B2600AC00D1 /* MLoadTest.m */; };
+		049B102723272B4A00AC00D1 /* MLoadTestChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B102623272B4A00AC00D1 /* MLoadTestChild.m */; };
+		049B102A23272B6800AC00D1 /* MLoadTest+ca.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B102923272B6800AC00D1 /* MLoadTest+ca.m */; };
 		205287E5225F404900727DDA /* UIView+m.m in Sources */ = {isa = PBXBuildFile; fileRef = 205287E4225F404900727DDA /* UIView+m.m */; };
 		209CFDD1229CE58400DB6765 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209CFDD0229CE58400DB6765 /* TestViewController.m */; };
 		20F8D6D22233C2FD00836928 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8D6D12233C2FD00836928 /* AppDelegate.m */; };
@@ -38,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		049B102223272B2600AC00D1 /* MLoadTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLoadTest.h; sourceTree = "<group>"; };
+		049B102323272B2600AC00D1 /* MLoadTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLoadTest.m; sourceTree = "<group>"; };
+		049B102523272B4A00AC00D1 /* MLoadTestChild.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLoadTestChild.h; sourceTree = "<group>"; };
+		049B102623272B4A00AC00D1 /* MLoadTestChild.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLoadTestChild.m; sourceTree = "<group>"; };
+		049B102823272B6800AC00D1 /* MLoadTest+ca.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLoadTest+ca.h"; sourceTree = "<group>"; };
+		049B102923272B6800AC00D1 /* MLoadTest+ca.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MLoadTest+ca.m"; sourceTree = "<group>"; };
 		205287E3225F404900727DDA /* UIView+m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+m.h"; sourceTree = "<group>"; };
 		205287E4225F404900727DDA /* UIView+m.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+m.m"; sourceTree = "<group>"; };
 		209CFDCF229CE58400DB6765 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -118,6 +127,12 @@
 				20F8D7032233C31200836928 /* MProperty.m */,
 				20F8D6D32233C2FD00836928 /* ViewController.h */,
 				20F8D6D42233C2FD00836928 /* ViewController.m */,
+				049B102223272B2600AC00D1 /* MLoadTest.h */,
+				049B102323272B2600AC00D1 /* MLoadTest.m */,
+				049B102523272B4A00AC00D1 /* MLoadTestChild.h */,
+				049B102623272B4A00AC00D1 /* MLoadTestChild.m */,
+				049B102823272B6800AC00D1 /* MLoadTest+ca.h */,
+				049B102923272B6800AC00D1 /* MLoadTest+ca.m */,
 				209CFDCF229CE58400DB6765 /* TestViewController.h */,
 				209CFDD0229CE58400DB6765 /* TestViewController.m */,
 				20F8D6D62233C2FD00836928 /* Main.storyboard */,
@@ -280,7 +295,10 @@
 				209CFDD1229CE58400DB6765 /* TestViewController.m in Sources */,
 				20F8D7042233C31200836928 /* MProperty.m in Sources */,
 				205287E5225F404900727DDA /* UIView+m.m in Sources */,
+				049B102A23272B6800AC00D1 /* MLoadTest+ca.m in Sources */,
 				20F8D6D52233C2FD00836928 /* ViewController.m in Sources */,
+				049B102723272B4A00AC00D1 /* MLoadTestChild.m in Sources */,
+				049B102423272B2600AC00D1 /* MLoadTest.m in Sources */,
 				20F8D6E02233C2FE00836928 /* main.m in Sources */,
 				20F8D6D22233C2FD00836928 /* AppDelegate.m in Sources */,
 			);

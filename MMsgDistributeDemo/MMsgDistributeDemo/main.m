@@ -1,8 +1,8 @@
 //
 //  main.m
-//  iOS面试
+//  MMsgDistributeDemo
 //
-//  Created by mal on 2019/3/9.
+//  Created by mal on 2019/9/16.
 //  Copyright © 2019 mal. All rights reserved.
 //
 
@@ -10,7 +10,6 @@
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
-    NSLog(@"main");
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

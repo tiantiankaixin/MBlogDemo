@@ -14,4 +14,13 @@
 
 @implementation MProperty
 
+- (instancetype)init
+{
+    if (self = [super init])
+    {
+        _m_key = @"kkkk";
+    }
+    return self;
+}
+
 @end

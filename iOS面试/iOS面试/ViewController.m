@@ -10,6 +10,8 @@
 #import "MProperty.h"
 #import "UIView+m.h"
 #import "TestViewController.h"
+#import "MLoadTestChild.h"
+#import "MLoadTest+ca.h"
 
 #define isiPhonex ({\
 BOOL isPhoneX = NO;\
@@ -71,12 +73,22 @@ void MPrintRetainCount(id obj)
 //    {
 //        NSLog(@"..isIphoneX.");
 //    }
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+       
+        NSLog(@"log1");
+    });
+    sleep(1);
+    NSLog(@"log2");
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     TestViewController *test = [[TestViewController alloc] init];
     [self presentViewController:test animated:YES completion:nil];
+    
+    //目标：让多个obj都可以监听delegate的方法
+    //示例：让多个对象可以监控tableview的delegate
+    //思路：NSProxy作为tableview的delegate 在里面实现消息转发
 }
 
 @end

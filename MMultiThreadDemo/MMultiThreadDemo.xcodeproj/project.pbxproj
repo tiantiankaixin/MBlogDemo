@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0463DA08230EA78D00970318 /* NSObject+obj1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463DA07230EA78D00970318 /* NSObject+obj1.m */; };
+		0463DA0B230EA79600970318 /* NSObject+obj2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463DA0A230EA79600970318 /* NSObject+obj2.m */; };
 		20ED75F0213F828E00E16CD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20ED75EF213F828E00E16CD5 /* AppDelegate.m */; };
 		20ED75F3213F828E00E16CD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20ED75F2213F828E00E16CD5 /* ViewController.m */; };
 		20ED75F6213F828E00E16CD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20ED75F4213F828E00E16CD5 /* Main.storyboard */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0463DA06230EA78D00970318 /* NSObject+obj1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+obj1.h"; sourceTree = "<group>"; };
+		0463DA07230EA78D00970318 /* NSObject+obj1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+obj1.m"; sourceTree = "<group>"; };
+		0463DA09230EA79600970318 /* NSObject+obj2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+obj2.h"; sourceTree = "<group>"; };
+		0463DA0A230EA79600970318 /* NSObject+obj2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+obj2.m"; sourceTree = "<group>"; };
 		20ED75EB213F828E00E16CD5 /* MMultiThreadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMultiThreadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20ED75EE213F828E00E16CD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		20ED75EF213F828E00E16CD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +111,10 @@
 				20ED75EF213F828E00E16CD5 /* AppDelegate.m */,
 				20ED75F1213F828E00E16CD5 /* ViewController.h */,
 				20ED75F2213F828E00E16CD5 /* ViewController.m */,
+				0463DA06230EA78D00970318 /* NSObject+obj1.h */,
+				0463DA07230EA78D00970318 /* NSObject+obj1.m */,
+				0463DA09230EA79600970318 /* NSObject+obj2.h */,
+				0463DA0A230EA79600970318 /* NSObject+obj2.m */,
 				20ED75F4213F828E00E16CD5 /* Main.storyboard */,
 				20ED75F7213F828F00E16CD5 /* Assets.xcassets */,
 				20ED75F9213F828F00E16CD5 /* LaunchScreen.storyboard */,
@@ -262,6 +272,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0463DA08230EA78D00970318 /* NSObject+obj1.m in Sources */,
+				0463DA0B230EA79600970318 /* NSObject+obj2.m in Sources */,
 				20ED75F3213F828E00E16CD5 /* ViewController.m in Sources */,
 				20ED75FE213F828F00E16CD5 /* main.m in Sources */,
 				20ED75F0213F828E00E16CD5 /* AppDelegate.m in Sources */,
