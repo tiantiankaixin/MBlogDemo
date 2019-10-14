@@ -101,11 +101,11 @@ static int AAPLPlayerViewControllerKVOContext = 0;
     [self.player addObserver:self forKeyPath:@"currentItem.loadedTimeRanges" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:&AAPLPlayerViewControllerKVOContext];
     
     //监控播放进度
-    __weak SMKtvAudioPlayer *weakSelf = self;
+   // __weak SMKtvAudioPlayer *weakSelf = self;
     self.timeObserVerToken = [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
         
         double timeElapsed = CMTimeGetSeconds(time);
-        
+        NSLog(@"current play time: %.2f", timeElapsed);
     }];
 }
 //移除observer
@@ -152,6 +152,7 @@ static int AAPLPlayerViewControllerKVOContext = 0;
     else if ([keyPath isEqualToString:@"currentItem.loadedTimeRanges"])//加载进度
     {
         CGFloat loadProgress = [self videoloadProgress];
+        NSLog(@"load progress: %.2f", loadProgress);
     }
     else
     {

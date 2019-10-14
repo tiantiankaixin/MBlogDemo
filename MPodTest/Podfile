@@ -6,5 +6,6 @@ source 'https://gitee.com/wtMal/malpodspecs.git'
 target 'MPodTest' do
  
 pod 'MNetMonitor', '~> 1.0.1'
+pod 'MMenu'
 
 end

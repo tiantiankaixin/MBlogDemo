@@ -12,6 +12,7 @@
 @interface SecondViewController ()<MTestProtocol>
 
 @property (nonatomic, weak) XNGNotificationProxy<MTestProtocol> *proxy;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -22,6 +23,12 @@
     [super viewDidLoad];
     self.proxy = (XNGNotificationProxy<MTestProtocol> *)[XNGNotificationProxy sharedProxy];
     // Do any additional setup after loading the view.
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:[YYWeakProxy proxyWithTarget:self] selector:@selector(test) userInfo:nil repeats:YES];
+}
+
+- (void)test
+{
+    NSLog(@"test");
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -33,6 +40,8 @@
 
 - (void)dealloc
 {
+    [self.timer invalidate];
+    _timer = nil;
     NSLog(@"%@ dealloc", NSStringFromClass(self.class));
 }
 
