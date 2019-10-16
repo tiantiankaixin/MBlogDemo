@@ -16,8 +16,6 @@
 		201E404D233EF3A0001936A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 201E404C233EF3A0001936A2 /* main.m */; };
 		201E4057233EF3A0001936A2 /* MRacDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201E4056233EF3A0001936A2 /* MRacDemoTests.m */; };
 		201E4062233EF3A0001936A2 /* MRacDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201E4061233EF3A0001936A2 /* MRacDemoUITests.m */; };
-		201E4072233EF617001936A2 /* MMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201E4071233EF617001936A2 /* MMenuViewController.m */; };
-		201E4075233EF623001936A2 /* MMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 201E4074233EF623001936A2 /* MMenuItem.m */; };
 		201E4078233EFB6F001936A2 /* SampleCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201E4077233EFB6F001936A2 /* SampleCodeViewController.m */; };
 		201E407D234053B7001936A2 /* SampleCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201E407C234053B7001936A2 /* SampleCodeViewController.xib */; };
 		DA60AD62F15BE70F481CEA3D /* libPods-MRacDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD1462415061827744BA14B /* libPods-MRacDemo.a */; };
@@ -59,10 +57,6 @@
 		201E405D233EF3A0001936A2 /* MRacDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MRacDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		201E4061233EF3A0001936A2 /* MRacDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRacDemoUITests.m; sourceTree = "<group>"; };
 		201E4063233EF3A0001936A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		201E4070233EF617001936A2 /* MMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMenuViewController.h; sourceTree = "<group>"; };
-		201E4071233EF617001936A2 /* MMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMenuViewController.m; sourceTree = "<group>"; };
-		201E4073233EF623001936A2 /* MMenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMenuItem.h; sourceTree = "<group>"; };
-		201E4074233EF623001936A2 /* MMenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMenuItem.m; sourceTree = "<group>"; };
 		201E4076233EFB6F001936A2 /* SampleCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleCodeViewController.h; sourceTree = "<group>"; };
 		201E4077233EFB6F001936A2 /* SampleCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleCodeViewController.m; sourceTree = "<group>"; };
 		201E4079233EFE93001936A2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -123,7 +117,6 @@
 		201E4039233EF39F001936A2 /* MRacDemo */ = {
 			isa = PBXGroup;
 			children = (
-				201E406F233EF5F0001936A2 /* MMenu */,
 				201E403A233EF39F001936A2 /* AppDelegate.h */,
 				201E403B233EF39F001936A2 /* AppDelegate.m */,
 				201E403D233EF39F001936A2 /* SceneDelegate.h */,
@@ -159,17 +152,6 @@
 				201E4063233EF3A0001936A2 /* Info.plist */,
 			);
 			path = MRacDemoUITests;
-			sourceTree = "<group>";
-		};
-		201E406F233EF5F0001936A2 /* MMenu */ = {
-			isa = PBXGroup;
-			children = (
-				201E4070233EF617001936A2 /* MMenuViewController.h */,
-				201E4071233EF617001936A2 /* MMenuViewController.m */,
-				201E4073233EF623001936A2 /* MMenuItem.h */,
-				201E4074233EF623001936A2 /* MMenuItem.m */,
-			);
-			path = MMenu;
 			sourceTree = "<group>";
 		};
 		4158078015DC7830D08CBF23 /* Pods */ = {
@@ -347,12 +329,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				201E4042233EF39F001936A2 /* ViewController.m in Sources */,
-				201E4072233EF617001936A2 /* MMenuViewController.m in Sources */,
 				201E403C233EF39F001936A2 /* AppDelegate.m in Sources */,
 				201E404D233EF3A0001936A2 /* main.m in Sources */,
 				201E4078233EFB6F001936A2 /* SampleCodeViewController.m in Sources */,
 				201E403F233EF39F001936A2 /* SceneDelegate.m in Sources */,
-				201E4075233EF623001936A2 /* MMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

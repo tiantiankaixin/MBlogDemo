@@ -20,7 +20,6 @@
 {
     [super viewDidLoad];
     [[XNGNotificationProxy sharedProxy] registerProtocol:@protocol(MTestProtocol) forObject:self];
-    [CHGlobalSingleton testFunc];
 }
 
 - (void)mt_testfunc

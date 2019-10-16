@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MMenuViewController.h"
+#import <MMenuViewController.h>
 
 @interface ViewController : MMenuViewController
 
