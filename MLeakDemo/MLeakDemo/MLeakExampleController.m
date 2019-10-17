@@ -20,11 +20,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setTestBlock:^{
-        
-        NSLog(@"%@", self.testStr);
-    }];
+//    [self setTestBlock:^{
+//
+//        NSLog(@"%@", self.testStr);
+//    }];
+    [self performSelector:@selector(testFunc) withObject:nil afterDelay:5];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)testFunc
+{
+    
 }
 
 - (void)dealloc

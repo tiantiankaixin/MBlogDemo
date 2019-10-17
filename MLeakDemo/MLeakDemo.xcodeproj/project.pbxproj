@@ -18,6 +18,7 @@
 		20C55700235821A00082E0D0 /* MLeakDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C556FF235821A00082E0D0 /* MLeakDemoUITests.m */; };
 		20C55710235822280082E0D0 /* MLeakExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C5570E235822280082E0D0 /* MLeakExampleController.m */; };
 		20C55711235822280082E0D0 /* MLeakExampleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C5570F235822280082E0D0 /* MLeakExampleController.xib */; };
+		20C5575B2358706C0082E0D0 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 20C5575A2358706C0082E0D0 /* ReadMe.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		20C5570D235822280082E0D0 /* MLeakExampleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLeakExampleController.h; sourceTree = "<group>"; };
 		20C5570E235822280082E0D0 /* MLeakExampleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLeakExampleController.m; sourceTree = "<group>"; };
 		20C5570F235822280082E0D0 /* MLeakExampleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLeakExampleController.xib; sourceTree = "<group>"; };
+		20C5575A2358706C0082E0D0 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		20C556D72358219F0082E0D0 /* MLeakDemo */ = {
 			isa = PBXGroup;
 			children = (
+				20C5575A2358706C0082E0D0 /* ReadMe.md */,
 				20C556D82358219F0082E0D0 /* AppDelegate.h */,
 				20C556D92358219F0082E0D0 /* AppDelegate.m */,
 				20C556DB2358219F0082E0D0 /* SceneDelegate.h */,
@@ -252,6 +255,7 @@
 				20C55711235822280082E0D0 /* MLeakExampleController.xib in Resources */,
 				20C556E5235821A00082E0D0 /* Assets.xcassets in Resources */,
 				20C556E32358219F0082E0D0 /* Main.storyboard in Resources */,
+				20C5575B2358706C0082E0D0 /* ReadMe.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
