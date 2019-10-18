@@ -56,6 +56,7 @@ class MMenuViewController: UITableViewController {
 
             if let navi = self.navigationController{
 
+                vc.view.backgroundColor = UIColor.white
                 navi.pushViewController(vc, animated: true)
             }
         }
