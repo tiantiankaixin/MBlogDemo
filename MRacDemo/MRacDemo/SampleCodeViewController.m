@@ -26,8 +26,9 @@ typedef NSString *(^finishBlock)(int);
 {
     [super viewDidLoad];
     //[self _racobserver];
-    [self _bindProperty];
-    [self _racCommand];
+    //[self _bindProperty];
+    //[self _racCommand];
+    [self _signalTest];
     // Do any additional setup after loading the view.
 }
 
@@ -69,6 +70,55 @@ typedef NSString *(^finishBlock)(int);
 - (void)_racCommand
 {
     
+}
+
+- (void)_signalTest
+{
+    RACSignal *signal = [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        
+        //[subscriber sendError:[NSError errorWithDomain:@"MRacDemo" code:-1345 userInfo:@{@"msg" : @"发生错误了"}]];
+        for (int i = 0; i < 5; i++)
+        {
+            if (i == 3)
+            {
+                [subscriber sendCompleted];
+            }
+            else
+            {
+                [subscriber sendNext:[NSString stringWithFormat:@"%d", i]];
+            }
+        }
+        return [RACDisposable disposableWithBlock:^{
+            
+            NSLog(@"RACDisposable");
+        }];
+    }] subscribeNext:^(id  _Nullable x) {
+        
+         NSLog(@"收到订阅%@", x);
+        
+    } error:^(NSError * _Nullable error) {
+        
+        NSLog(@"error: %@", error);
+        
+    } completed:^{
+       
+        NSLog(@"subscribeCompleted");
+    }];
+    
+    [signal subscribeNext:^(id  _Nullable x) {
+
+        NSLog(@"收到订阅%@", x);
+    }];
+    
+//    [signal subscribeError:^(NSError * _Nullable error) {
+//
+//        NSLog(@"error: %@", error);
+//    }];
+//
+//    [signal subscribeCompleted:^{
+//
+//        NSLog(@"subscribeCompleted");
+//    }];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
