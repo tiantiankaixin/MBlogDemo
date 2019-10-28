@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2002E1F12362F4160052AC8F /* MProtocolClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2002E1F02362F4160052AC8F /* MProtocolClass.m */; };
 		201F1A79234EE71100B890D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 201F1A78234EE71100B890D8 /* AppDelegate.m */; };
 		201F1A7C234EE71100B890D8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 201F1A7B234EE71100B890D8 /* SceneDelegate.m */; };
 		201F1A7F234EE71100B890D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201F1A7E234EE71100B890D8 /* ViewController.m */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2002E1EF2362F4160052AC8F /* MProtocolClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MProtocolClass.h; sourceTree = "<group>"; };
+		2002E1F02362F4160052AC8F /* MProtocolClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MProtocolClass.m; sourceTree = "<group>"; };
 		201F1A74234EE71100B890D8 /* MPodTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPodTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201F1A77234EE71100B890D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		201F1A78234EE71100B890D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				201F1A7B234EE71100B890D8 /* SceneDelegate.m */,
 				201F1A7D234EE71100B890D8 /* ViewController.h */,
 				201F1A7E234EE71100B890D8 /* ViewController.m */,
+				2002E1EF2362F4160052AC8F /* MProtocolClass.h */,
+				2002E1F02362F4160052AC8F /* MProtocolClass.m */,
 				201F1AB0234F2B4300B890D8 /* SecondViewController.h */,
 				201F1AB1234F2B4300B890D8 /* SecondViewController.m */,
 				201F1AB2234F2B4300B890D8 /* SecondViewController.xib */,
@@ -352,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2002E1F12362F4160052AC8F /* MProtocolClass.m in Sources */,
 				201F1AB3234F2B4300B890D8 /* SecondViewController.m in Sources */,
 				201F1AB8234F317400B890D8 /* YYWeakProxy.m in Sources */,
 				201F1A7F234EE71100B890D8 /* ViewController.m in Sources */,
