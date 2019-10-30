@@ -14,7 +14,7 @@ class MFindViewController: UIViewController {
         super.viewDidLoad()
         let array = MFindViewController.mcreateArrayWithNums(nums: 10, maxNum: 100)
         print("排序前array = \(array)")
-        let sortArray = MFindViewController.mSortNumArray(array: array)
+        let sortArray = MFindViewController.mSelectSortNumArray(array: array)
         print("排序后array = \(sortArray)")
     }
 
@@ -40,7 +40,8 @@ class MFindViewController: UIViewController {
     static func mSortNumArray(array: [Int]) -> [Int] {
         
         let count = array.count
-        guard count > 0 else {
+        guard count > 1 else {
+            print("\(array)\n不需要排序")
             return array
         }
         var sortArray = array
@@ -61,6 +62,32 @@ class MFindViewController: UIViewController {
             if isContinue == false {
                 break
             }
+        }
+        return sortArray
+    }
+    
+    static func mSelectSortNumArray(array: [Int]) -> [Int] {
+        
+        let count = array.count
+        guard count > 1 else {
+            print("\(array)\n不需要排序")
+            return array
+        }
+        var sortArray = array
+        for i in 0...(count - 2) {
+            
+            var maxIndex = 0
+            for j in 0...(count - i - 1) {
+                
+                let jNum = sortArray[j]
+                if jNum > sortArray[maxIndex] {
+                    maxIndex = j
+                }
+            }
+            let num1 = sortArray[maxIndex]
+            let num2 = sortArray[count - i - 1]
+            sortArray[maxIndex] = num2
+            sortArray[count - i - 1] = num1
         }
         return sortArray
     }
