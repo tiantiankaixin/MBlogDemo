@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy) void(^testBlock)(void);
 @property (nonatomic, copy) NSString *testStr;
+@property (nonatomic, weak) NSMutableArray *weakArray;
 
 @end
 
@@ -20,10 +21,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [self setTestBlock:^{
-//
-//        NSLog(@"%@", self.testStr);
-//    }];
+    [self setTestBlock:^{
+
+        NSLog(@"%@", self.testStr);
+    }];
+   
     [self performSelector:@selector(testFunc) withObject:nil afterDelay:5];
     // Do any additional setup after loading the view from its nib.
 }
