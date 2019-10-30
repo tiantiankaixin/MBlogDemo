@@ -12,15 +12,16 @@ class MFindViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nums: UInt32 = 30
-        let array = MFindViewController.mcreateArrayWithNums(nums: nums, maxNum: 100)
-        print("排序前array = \(array)")
-        let sortArray = MFindViewController.mSortNumArray(array: array)
-        print("排序后array = \(sortArray)")
-        let findIndex = Int(arc4random() % nums)
-        let findNum = sortArray[findIndex]
+        let nums:UInt32 = 100
+        let findIndex = Int(arc4random() % nums) + 1
+        var array = [Int]()
+        for i in 0...nums {
+            array.append(Int(i))
+        }
+        //print("要查找的数组是：\(array)")
+        let findNum = array[findIndex]
         print("要查找的数是：\(findNum) 正确的index是：\(findIndex)")
-        let index = MFindViewController.m2fenchazhao(array: sortArray, target: findNum)
+        let index = MFindViewController.m2fenchazhao(array: array, target: findNum)
         print("查找到的index是：\(index ?? -1)")
     }
 
@@ -86,7 +87,16 @@ class MFindViewController: UIViewController {
     //MARK: 二分查找
     static func m2fenchazhao(array: [Int], target: Int) -> Int? {
         
+        return self.m2fenchazhao1(array: array, target: target, lowIndex: 0, highIndex: array.count - 1)
+    }
+    
+    static func m2fenchazhao1(array: [Int], target: Int, lowIndex: Int, highIndex: Int) -> Int? {
+        
         let count = array.count
+        if lowIndex > highIndex || highIndex > count - 1 {
+            print("输入参数有误")
+            return nil
+        }
         if count < 3 {
             
             for (idx, obj) in array.enumerated() {
@@ -97,7 +107,8 @@ class MFindViewController: UIViewController {
                 }
             }
         }
-        let midIndex = count / 2 + (count % 2) - 1
+        let midIndex = (highIndex - lowIndex) / 2 + (highIndex - lowIndex) % 2 + lowIndex
+        //print("lowIndex:\(lowIndex) highIndex:\(highIndex) midIndex:\(midIndex)")
         let midNum = array[midIndex]
         if midNum == target {
             
@@ -105,47 +116,36 @@ class MFindViewController: UIViewController {
             
         } else if midNum > target {
             
-            if let newArray = self.mRangeArray(array: array, fromIndx: 0, toIndex: midIndex - 1) {
-             
-                return self.m2fenchazhao(array: newArray, target: target)
-            }
+            return self.m2fenchazhao1(array: array, target: target, lowIndex: lowIndex, highIndex: midIndex - 1)
             
         } else {
             
-            if let newArray = self.mRangeArray(array: array, fromIndx: midIndex + 1, toIndex: count - 1) {
-                
-                if let index = self.m2fenchazhao(array: newArray, target: target) {
-                    
-                    return index + midIndex + 1
-                }
-            }
+            return self.m2fenchazhao1(array: array, target: target, lowIndex: midIndex + 1, highIndex: highIndex)
         }
-        return nil
     }
     
     //MARK: --------------- help
-    
     /// 随机整形数组生成
     /// - Parameter nums: 数组元素个数
     /// - Parameter maxNum: 元素最大值
     static func mcreateArrayWithNums(nums: UInt32, maxNum: Int) -> [Int]{
-           
-           var array = [Int]()
-           if maxNum < nums {
-               
-               print("无法生成指定数组 个数：\(nums) 最大值：\(maxNum)")
-               return array
-           }
-           while array.count < nums {
-               
-               let num = Int(arc4random()) % maxNum + 1
-               if array.contains(num) == false {
-                   
-                   array.append(num)
-               }
-           }
-           return array
-       }
+        
+        var array = [Int]()
+        if maxNum < nums {
+            
+            print("无法生成指定数组 个数：\(nums) 最大值：\(maxNum)")
+            return array
+        }
+        while array.count < nums {
+            
+            let num = Int(arc4random()) % maxNum + 1
+            if array.contains(num) == false {
+                
+                array.append(num)
+            }
+        }
+        return array
+    }
     
     /// 截取数组
     /// - Parameter array: 源数组
