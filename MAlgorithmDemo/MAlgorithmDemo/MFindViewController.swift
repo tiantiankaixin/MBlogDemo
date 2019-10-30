@@ -12,13 +12,19 @@ class MFindViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let array = MFindViewController.mcreateArrayWithNums(nums: 10, maxNum: 100)
+        let nums: UInt32 = 30
+        let array = MFindViewController.mcreateArrayWithNums(nums: nums, maxNum: 100)
         print("排序前array = \(array)")
         let sortArray = MFindViewController.mSelectSortNumArray(array: array)
         print("排序后array = \(sortArray)")
+        let findIndex = Int(arc4random() % nums)
+        let findNum = sortArray[findIndex]
+        print("要查找的数是：\(findNum) 正确的index是：\(findIndex)")
+        let index = MFindViewController.m2fenchazhao(array: sortArray, target: findNum)
+        print("查找到的index是：\(index ?? -1)")
     }
 
-    static func mcreateArrayWithNums(nums: Int, maxNum: Int) -> [Int]{
+    static func mcreateArrayWithNums(nums: UInt32, maxNum: Int) -> [Int]{
         
         var array = [Int]()
         if maxNum < nums {
@@ -90,5 +96,58 @@ class MFindViewController: UIViewController {
             sortArray[count - i - 1] = num1
         }
         return sortArray
+    }
+    
+    static func m2fenchazhao(array: [Int], target: Int) -> Int? {
+        
+        let count = array.count
+        if count < 3 {
+            
+            for (idx, obj) in array.enumerated() {
+                
+                if obj == target {
+                    
+                    return idx
+                }
+            }
+        }
+        let midIndex = count / 2 + (count % 2) - 1
+        let midNum = array[midIndex]
+        if midNum == target {
+            
+            return midIndex
+            
+        } else if midNum > target {
+            
+            if let newArray = self.mRangeArray(array: array, fromIndx: 0, toIndex: midIndex - 1) {
+             
+                return self.m2fenchazhao(array: newArray, target: target)
+            }
+            
+        } else {
+            
+            if let newArray = self.mRangeArray(array: array, fromIndx: midIndex + 1, toIndex: count - 1) {
+                
+                if let index = self.m2fenchazhao(array: newArray, target: target) {
+                    
+                    return index + midIndex + 1
+                }
+            }
+        }
+        return nil
+    }
+    
+    static func mRangeArray<T>(array: [T], fromIndx: Int, toIndex: Int) -> [T]? {
+        
+        var newArray = [T]()
+        if fromIndx < toIndex && toIndex < array.count {
+            
+            for i in fromIndx...toIndex {
+                
+                newArray.append(array[i])
+            }
+            return newArray
+        }
+        return nil;
     }
 }
