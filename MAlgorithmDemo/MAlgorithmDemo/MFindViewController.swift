@@ -15,7 +15,7 @@ class MFindViewController: UIViewController {
         let nums: UInt32 = 30
         let array = MFindViewController.mcreateArrayWithNums(nums: nums, maxNum: 100)
         print("排序前array = \(array)")
-        let sortArray = MFindViewController.mSelectSortNumArray(array: array)
+        let sortArray = MFindViewController.mSortNumArray(array: array)
         print("排序后array = \(sortArray)")
         let findIndex = Int(arc4random() % nums)
         let findNum = sortArray[findIndex]
@@ -24,25 +24,8 @@ class MFindViewController: UIViewController {
         print("查找到的index是：\(index ?? -1)")
     }
 
-    static func mcreateArrayWithNums(nums: UInt32, maxNum: Int) -> [Int]{
-        
-        var array = [Int]()
-        if maxNum < nums {
-            
-            print("无法生成指定数组 个数：\(nums) 最大值：\(maxNum)")
-            return array
-        }
-        while array.count < nums {
-            
-            let num = Int(arc4random()) % maxNum + 1
-            if array.contains(num) == false {
-                
-                array.append(num)
-            }
-        }
-        return array
-    }
-    
+    //MARK: ---------------------排序算法
+    //MARK: 冒泡排序
     static func mSortNumArray(array: [Int]) -> [Int] {
         
         let count = array.count
@@ -72,6 +55,7 @@ class MFindViewController: UIViewController {
         return sortArray
     }
     
+    //MARK: 选择排序
     static func mSelectSortNumArray(array: [Int]) -> [Int] {
         
         let count = array.count
@@ -98,6 +82,8 @@ class MFindViewController: UIViewController {
         return sortArray
     }
     
+    //MARK: ---------------------查找算法
+    //MARK: 二分查找
     static func m2fenchazhao(array: [Int], target: Int) -> Int? {
         
         let count = array.count
@@ -137,6 +123,34 @@ class MFindViewController: UIViewController {
         return nil
     }
     
+    //MARK: --------------- help
+    
+    /// 随机整形数组生成
+    /// - Parameter nums: 数组元素个数
+    /// - Parameter maxNum: 元素最大值
+    static func mcreateArrayWithNums(nums: UInt32, maxNum: Int) -> [Int]{
+           
+           var array = [Int]()
+           if maxNum < nums {
+               
+               print("无法生成指定数组 个数：\(nums) 最大值：\(maxNum)")
+               return array
+           }
+           while array.count < nums {
+               
+               let num = Int(arc4random()) % maxNum + 1
+               if array.contains(num) == false {
+                   
+                   array.append(num)
+               }
+           }
+           return array
+       }
+    
+    /// 截取数组
+    /// - Parameter array: 源数组
+    /// - Parameter fromIndx: 截取起始位置
+    /// - Parameter toIndex: 截取终止位置
     static func mRangeArray<T>(array: [T], fromIndx: Int, toIndex: Int) -> [T]? {
         
         var newArray = [T]()
