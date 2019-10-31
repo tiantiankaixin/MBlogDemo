@@ -18,6 +18,7 @@
 		20C55741235845CA0082E0D0 /* MAlgorithmDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C55740235845CA0082E0D0 /* MAlgorithmDemoUITests.swift */; };
 		20C55751235855F10082E0D0 /* MMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C55750235855F10082E0D0 /* MMenuViewController.swift */; };
 		20C5575723585F5F0082E0D0 /* MMatrixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5575623585F5F0082E0D0 /* MMatrixViewController.swift */; };
+		20EC29C1236A8F7300F3D277 /* MHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC29C0236A8F7300F3D277 /* MHelp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		20C55742235845CA0082E0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C55750235855F10082E0D0 /* MMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMenuViewController.swift; sourceTree = "<group>"; };
 		20C5575623585F5F0082E0D0 /* MMatrixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMatrixViewController.swift; sourceTree = "<group>"; };
+		20EC29C0236A8F7300F3D277 /* MHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHelp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				20C5571E235845C90082E0D0 /* AppDelegate.swift */,
 				20C55720235845C90082E0D0 /* SceneDelegate.swift */,
 				20C55750235855F10082E0D0 /* MMenuViewController.swift */,
+				20EC29C0236A8F7300F3D277 /* MHelp.swift */,
 				20C55722235845C90082E0D0 /* ViewController.swift */,
 				20C5575623585F5F0082E0D0 /* MMatrixViewController.swift */,
 				2002E1F4236942240052AC8F /* MFindViewController.swift */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C55723235845C90082E0D0 /* ViewController.swift in Sources */,
+				20EC29C1236A8F7300F3D277 /* MHelp.swift in Sources */,
 				2002E1F5236942240052AC8F /* MFindViewController.swift in Sources */,
 				20C5571F235845C90082E0D0 /* AppDelegate.swift in Sources */,
 				20C55751235855F10082E0D0 /* MMenuViewController.swift in Sources */,

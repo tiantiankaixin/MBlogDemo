@@ -12,17 +12,33 @@ class MFindViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nums:UInt32 = 100
-        let findIndex = Int(arc4random() % nums) + 1
-        var array = [Int]()
-        for i in 0...nums {
-            array.append(Int(i))
+        self.binary_seary_test()
+    }
+    
+    //MARK: ------------测试小例子
+    //MARK: 二分查找测试
+    func binary_seary_test() {
+        
+        DispatchQueue.global().async {
+            
+            let nums:UInt32 = 20
+            let findIndex = Int(arc4random() % nums) + 1
+            var array = [Int]()
+            for i in 0...nums {
+                array.append(Int(i))
+                if i == findIndex {
+                    array.append(Int(i))
+                    array.append(Int(i))
+                }
+            }
+            print("要查找的数组是：\(array)")
+            let findNum = array[findIndex]
+            print("要查找的数是：\(findNum) 正确的index是：\(findIndex)")
+            MHelp.m_startTime()
+            let index = MFindViewController.m2fenfeidigui(array: array, target: findNum)
+            print("查找到的index是：\(index ?? [-1])")
+            MHelp.m_printCostTime()
         }
-        //print("要查找的数组是：\(array)")
-        let findNum = array[findIndex]
-        print("要查找的数是：\(findNum) 正确的index是：\(findIndex)")
-        let index = MFindViewController.m2fenfeidigui(array: array, target: findNum)
-        print("查找到的index是：\(index ?? -1)")
     }
 
     //MARK: ---------------------排序算法
@@ -84,7 +100,7 @@ class MFindViewController: UIViewController {
     }
     
     //MARK: ---------------------查找算法
-    //MARK: 二分查找
+    //MARK: 二分查找递归实现（性能要比非递归差很多）
     static func m2fenchazhao(array: [Int], target: Int) -> Int? {
         
         return self.m2fenchazhao1(array: array, target: target, lowIndex: 0, highIndex: array.count - 1)
@@ -124,15 +140,16 @@ class MFindViewController: UIViewController {
         }
     }
     
-    static func m2fenfeidigui(array: [Int], target: Int) -> Int? {
+    //MARK: 二分查找非递归实现
+    static func m2fenfeidigui(array: [Int], target: Int) -> [Int]? {
         
         var low = 0
-        var high = array.count
+        var high = array.count - 1
         while low <= high {
             let mid = (low + high) / 2
             let guess = array[mid]
             if guess == target {
-                return mid
+                return self.m2fenSameNumHandle(array: array, target: target, rightIndex: mid)
             }
             if guess > target {
                 high = mid - 1
@@ -141,6 +158,33 @@ class MFindViewController: UIViewController {
             }
         }
         return nil
+    }
+    
+    static func m2fenSameNumHandle(array: [Int], target: Int, rightIndex: Int) -> [Int] {
+        
+        var resultArray = [Int]()
+        resultArray.append(rightIndex)
+        let maxIndex = array.count - 1
+        var countIndex = rightIndex + 1
+        let minIndex = 0
+        while countIndex <= maxIndex {
+            if target == array[countIndex] {
+                resultArray.append(countIndex)
+                countIndex = countIndex + 1
+            } else{
+                break
+            }
+        }
+        countIndex = rightIndex - 1
+        while countIndex >= minIndex {
+            if target == array[countIndex] {
+                resultArray.append(countIndex)
+                countIndex = countIndex - 1
+            } else{
+                break
+            }
+        }
+        return resultArray
     }
     
     //MARK: --------------- help
