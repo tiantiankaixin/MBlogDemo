@@ -21,7 +21,7 @@ class MFindViewController: UIViewController {
         //print("要查找的数组是：\(array)")
         let findNum = array[findIndex]
         print("要查找的数是：\(findNum) 正确的index是：\(findIndex)")
-        let index = MFindViewController.m2fenchazhao(array: array, target: findNum)
+        let index = MFindViewController.m2fenfeidigui(array: array, target: findNum)
         print("查找到的index是：\(index ?? -1)")
     }
 
@@ -107,7 +107,7 @@ class MFindViewController: UIViewController {
                 }
             }
         }
-        let midIndex = (highIndex - lowIndex) / 2 + (highIndex - lowIndex) % 2 + lowIndex
+        let midIndex = (lowIndex + highIndex) / 2;
         //print("lowIndex:\(lowIndex) highIndex:\(highIndex) midIndex:\(midIndex)")
         let midNum = array[midIndex]
         if midNum == target {
@@ -124,8 +124,27 @@ class MFindViewController: UIViewController {
         }
     }
     
+    static func m2fenfeidigui(array: [Int], target: Int) -> Int? {
+        
+        var low = 0
+        var high = array.count
+        while low <= high {
+            let mid = (low + high) / 2
+            let guess = array[mid]
+            if guess == target {
+                return mid
+            }
+            if guess > target {
+                high = mid - 1
+            } else {
+              low = mid + 1
+            }
+        }
+        return nil
+    }
+    
     //MARK: --------------- help
-    /// 随机整形数组生成
+    /// 随机整形数组生成（无重复 数量过多的时候有性能问题）
     /// - Parameter nums: 数组元素个数
     /// - Parameter maxNum: 元素最大值
     static func mcreateArrayWithNums(nums: UInt32, maxNum: Int) -> [Int]{
