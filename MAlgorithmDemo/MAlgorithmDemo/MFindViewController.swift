@@ -103,6 +103,8 @@ class MFindViewController: UIViewController {
         return sortArray
     }
     
+    //MARK: 快速排序n * log2n（n是每次根据基准点将数组分为两部分时需要遍历整个数组 log是指每次都将数组折半折 /2 /2 折对数次就可将数组变为<=1个元素）
+    //如果不凑巧每次选中的都是最大/最小的值 那就需要执行算法n次；所以最复杂的情况时间复杂度为n * n
     func mquickSort(array: [Int]) -> [Int] {
         if array.count < 2 {
             return array
@@ -120,6 +122,15 @@ class MFindViewController: UIViewController {
         }
         return mquickSort(array: lowArray) + [baseNum] + mquickSort(array: highArray)
     }
+    
+//    func mquickSort1(array: [Int]) -> [Int] {
+//        guard array.count > 0 else {
+//             return array
+//        }
+//        var baseNum = array[0]
+//        
+//        return [0]
+//    }
     
     //MARK: ---------------------查找算法
     //MARK: 二分查找递归实现（性能要比非递归差很多）
