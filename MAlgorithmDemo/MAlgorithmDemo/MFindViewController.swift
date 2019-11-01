@@ -110,7 +110,8 @@ class MFindViewController: UIViewController {
         let baseNum = array[0]
         var lowArray = [Int]()
         var highArray = [Int]()
-        for num in array {
+        for i in 1...(array.count - 1) {
+            let num = array[i]
             if num < baseNum {
                 lowArray.append(num)
             } else {
