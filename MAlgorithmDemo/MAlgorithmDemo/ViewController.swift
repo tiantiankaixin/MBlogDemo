@@ -14,6 +14,7 @@ class ViewController: MMenuViewController {
         super.viewDidLoad()
         self.mAddItem(item: MMenuItem.ItemWith(title: "矩阵", itemClass: MMatrixViewController.self))
         self.mAddItem(item: MMenuItem.ItemWith(title: "查找算法", itemClass: MFindViewController.self))
+        self.mAddItem(item: MMenuItem.ItemWith(title: "递归", itemClass: MDiguiViewController.self))
     }
 }
 

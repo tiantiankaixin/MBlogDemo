@@ -12,7 +12,11 @@ class MFindViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.binary_seary_test()
+        //self.binary_seary_test()
+        let array = MFindViewController.mcreateArrayWithNums(nums: 20, maxNum: 30)
+        print("需要排序的数组是：\(array)")
+        let sortArray = self.mquickSort(array: array)
+        print("排序后的数组是：\(sortArray)")
     }
     
     //MARK: ------------测试小例子
@@ -99,6 +103,23 @@ class MFindViewController: UIViewController {
         return sortArray
     }
     
+    func mquickSort(array: [Int]) -> [Int] {
+        if array.count < 2 {
+            return array
+        }
+        let baseNum = array[0]
+        var lowArray = [Int]()
+        var highArray = [Int]()
+        for num in array {
+            if num < baseNum {
+                lowArray.append(num)
+            } else {
+                highArray.append(num)
+            }
+        }
+        return mquickSort(array: lowArray) + [baseNum] + mquickSort(array: highArray)
+    }
+    
     //MARK: ---------------------查找算法
     //MARK: 二分查找递归实现（性能要比非递归差很多）
     static func m2fenchazhao(array: [Int], target: Int) -> Int? {
@@ -160,6 +181,7 @@ class MFindViewController: UIViewController {
         return nil
     }
     
+//解决二分查找数组里有相同元素查找不全的问题（因为二分查找要求数组是有序的，所以相同元素是紧挨在一起的，拿到一个正确的index左右遍历一下就可以了）
     static func m2fenSameNumHandle(array: [Int], target: Int, rightIndex: Int) -> [Int] {
         
         var resultArray = [Int]()
