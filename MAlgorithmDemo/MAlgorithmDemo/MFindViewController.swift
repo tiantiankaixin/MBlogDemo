@@ -122,16 +122,7 @@ class MFindViewController: UIViewController {
         }
         return mquickSort(array: lowArray) + [baseNum] + mquickSort(array: highArray)
     }
-    
-//    func mquickSort1(array: [Int]) -> [Int] {
-//        guard array.count > 0 else {
-//             return array
-//        }
-//        var baseNum = array[0]
-//        
-//        return [0]
-//    }
-    
+        
     //MARK: ---------------------查找算法
     //MARK: 二分查找递归实现（性能要比非递归差很多）
     static func m2fenchazhao(array: [Int], target: Int) -> Int? {
