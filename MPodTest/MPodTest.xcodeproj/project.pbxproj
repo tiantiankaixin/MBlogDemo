@@ -21,6 +21,7 @@
 		201F1AB3234F2B4300B890D8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201F1AB1234F2B4300B890D8 /* SecondViewController.m */; };
 		201F1AB4234F2B4300B890D8 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201F1AB2234F2B4300B890D8 /* SecondViewController.xib */; };
 		201F1AB8234F317400B890D8 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 201F1AB7234F317400B890D8 /* YYWeakProxy.m */; };
+		206467BF2375584E00FB3E11 /* MTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206467BE2375584E00FB3E11 /* MTestView.swift */; };
 		B5C35AB213D4E2C66AC2EEBE /* libPods-MPodTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5575FCFA39F6D118DCD877 /* libPods-MPodTest.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		201F1AB2234F2B4300B890D8 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		201F1AB6234F317400B890D8 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
 		201F1AB7234F317400B890D8 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		206467BD2375584D00FB3E11 /* MPodTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MPodTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		206467BE2375584E00FB3E11 /* MTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTestView.swift; sourceTree = "<group>"; };
 		3F5575FCFA39F6D118DCD877 /* libPods-MPodTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MPodTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC17EB6636041077BC79C7C /* Pods-MPodTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPodTest.release.xcconfig"; path = "Target Support Files/Pods-MPodTest/Pods-MPodTest.release.xcconfig"; sourceTree = "<group>"; };
 		77F43877CF2382191430E901 /* Pods-MPodTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPodTest.debug.xcconfig"; path = "Target Support Files/Pods-MPodTest/Pods-MPodTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 				201F1A7B234EE71100B890D8 /* SceneDelegate.m */,
 				201F1A7D234EE71100B890D8 /* ViewController.h */,
 				201F1A7E234EE71100B890D8 /* ViewController.m */,
+				206467BE2375584E00FB3E11 /* MTestView.swift */,
 				2002E1EF2362F4160052AC8F /* MProtocolClass.h */,
 				2002E1F02362F4160052AC8F /* MProtocolClass.m */,
 				201F1AB0234F2B4300B890D8 /* SecondViewController.h */,
@@ -143,6 +147,7 @@
 				201F1A85234EE71200B890D8 /* LaunchScreen.storyboard */,
 				201F1A88234EE71200B890D8 /* Info.plist */,
 				201F1A89234EE71200B890D8 /* main.m */,
+				206467BD2375584D00FB3E11 /* MPodTest-Bridging-Header.h */,
 			);
 			path = MPodTest;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				TargetAttributes = {
 					201F1A73234EE71100B890D8 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1110;
 					};
 					201F1A8E234EE71200B890D8 = {
 						CreatedOnToolsVersion = 11.0;
@@ -358,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2002E1F12362F4160052AC8F /* MProtocolClass.m in Sources */,
+				206467BF2375584E00FB3E11 /* MTestView.swift in Sources */,
 				201F1AB3234F2B4300B890D8 /* SecondViewController.m in Sources */,
 				201F1AB8234F317400B890D8 /* YYWeakProxy.m in Sources */,
 				201F1A7F234EE71100B890D8 /* ViewController.m in Sources */,
@@ -534,6 +541,7 @@
 			baseConfigurationReference = 77F43877CF2382191430E901 /* Pods-MPodTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MPodTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -542,6 +550,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.meishubao.MPodTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MPodTest/MPodTest-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = MSwift.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -551,6 +563,7 @@
 			baseConfigurationReference = 4FC17EB6636041077BC79C7C /* Pods-MPodTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MPodTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -559,6 +572,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.meishubao.MPodTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MPodTest/MPodTest-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = MSwift.h;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -566,6 +582,7 @@
 		201F1AA7234EE71200B890D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MPodTestTests/Info.plist;
@@ -585,6 +602,7 @@
 		201F1AA8234EE71200B890D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MPodTestTests/Info.plist;
@@ -604,6 +622,7 @@
 		201F1AAA234EE71200B890D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MPodTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -621,6 +640,7 @@
 		201F1AAB234EE71200B890D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MPodTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

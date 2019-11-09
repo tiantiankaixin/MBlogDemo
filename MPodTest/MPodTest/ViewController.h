@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define MTestStr @"teststr"
+
 @interface ViewController : UIViewController
 
 
