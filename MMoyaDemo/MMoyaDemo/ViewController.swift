@@ -13,7 +13,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        alamofire_test()
+        //alamofire_test()
+        Person.codableTest()
         // Do any additional setup after loading the view.
     }
 

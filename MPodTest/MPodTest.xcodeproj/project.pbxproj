@@ -22,6 +22,7 @@
 		201F1AB4234F2B4300B890D8 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201F1AB2234F2B4300B890D8 /* SecondViewController.xib */; };
 		201F1AB8234F317400B890D8 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 201F1AB7234F317400B890D8 /* YYWeakProxy.m */; };
 		206467BF2375584E00FB3E11 /* MTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206467BE2375584E00FB3E11 /* MTestView.swift */; };
+		20BE6BE9237A839D0059C8B5 /* UIView+Ai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE6BE8237A839D0059C8B5 /* UIView+Ai.swift */; };
 		B5C35AB213D4E2C66AC2EEBE /* libPods-MPodTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5575FCFA39F6D118DCD877 /* libPods-MPodTest.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		201F1AB7234F317400B890D8 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		206467BD2375584D00FB3E11 /* MPodTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MPodTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		206467BE2375584E00FB3E11 /* MTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTestView.swift; sourceTree = "<group>"; };
+		20BE6BE8237A839D0059C8B5 /* UIView+Ai.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ai.swift"; sourceTree = "<group>"; };
 		3F5575FCFA39F6D118DCD877 /* libPods-MPodTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MPodTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC17EB6636041077BC79C7C /* Pods-MPodTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPodTest.release.xcconfig"; path = "Target Support Files/Pods-MPodTest/Pods-MPodTest.release.xcconfig"; sourceTree = "<group>"; };
 		77F43877CF2382191430E901 /* Pods-MPodTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPodTest.debug.xcconfig"; path = "Target Support Files/Pods-MPodTest/Pods-MPodTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				201F1A7B234EE71100B890D8 /* SceneDelegate.m */,
 				201F1A7D234EE71100B890D8 /* ViewController.h */,
 				201F1A7E234EE71100B890D8 /* ViewController.m */,
+				20BE6BE8237A839D0059C8B5 /* UIView+Ai.swift */,
 				206467BE2375584E00FB3E11 /* MTestView.swift */,
 				2002E1EF2362F4160052AC8F /* MProtocolClass.h */,
 				2002E1F02362F4160052AC8F /* MProtocolClass.m */,
@@ -367,6 +370,7 @@
 				206467BF2375584E00FB3E11 /* MTestView.swift in Sources */,
 				201F1AB3234F2B4300B890D8 /* SecondViewController.m in Sources */,
 				201F1AB8234F317400B890D8 /* YYWeakProxy.m in Sources */,
+				20BE6BE9237A839D0059C8B5 /* UIView+Ai.swift in Sources */,
 				201F1A7F234EE71100B890D8 /* ViewController.m in Sources */,
 				201F1A79234EE71100B890D8 /* AppDelegate.m in Sources */,
 				201F1A8A234EE71200B890D8 /* main.m in Sources */,

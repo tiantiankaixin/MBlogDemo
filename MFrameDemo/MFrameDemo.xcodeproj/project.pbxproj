@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04F50E7522F400A9000BD76D /* Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F50E7422F400A9000BD76D /* Sum.swift */; };
 		20BFFBD621353EC800551C4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFBD521353EC800551C4A /* AppDelegate.m */; };
 		20BFFBD921353EC800551C4A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFFBD821353EC800551C4A /* ViewController.m */; };
 		20BFFBDC21353EC800551C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BFFBDA21353EC800551C4A /* Main.storyboard */; };
@@ -41,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		04F50E7322F400A8000BD76D /* MFrameDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFrameDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		04F50E7422F400A9000BD76D /* Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sum.swift; sourceTree = "<group>"; };
 		20BFFBD121353EC800551C4A /* MFrameDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFrameDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BFFBD421353EC800551C4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		20BFFBD521353EC800551C4A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				20BFFBD521353EC800551C4A /* AppDelegate.m */,
 				20BFFBD721353EC800551C4A /* ViewController.h */,
 				20BFFBD821353EC800551C4A /* ViewController.m */,
-				04F50E7422F400A9000BD76D /* Sum.swift */,
 				20BFFBDA21353EC800551C4A /* Main.storyboard */,
 				20BFFBDD21353ECA00551C4A /* Assets.xcassets */,
 				20BFFBDF21353ECA00551C4A /* LaunchScreen.storyboard */,
@@ -297,7 +294,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				20BFFC1021353EDD00551C4A /* UIView+mframe.m in Sources */,
-				04F50E7522F400A9000BD76D /* Sum.swift in Sources */,
 				20BFFC1221353EDD00551C4A /* MSetFrame.m in Sources */,
 				20BFFC0F21353EDD00551C4A /* UIView+frame.m in Sources */,
 				20BFFBD921353EC800551C4A /* ViewController.m in Sources */,
@@ -510,7 +506,6 @@
 		20BFFC0121353ECB00551C4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MFrameDemoTests/Info.plist;
@@ -529,7 +524,6 @@
 		20BFFC0221353ECB00551C4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MFrameDemoTests/Info.plist;
@@ -548,7 +542,6 @@
 		20BFFC0421353ECB00551C4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MFrameDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -566,7 +559,6 @@
 		20BFFC0521353ECB00551C4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MFrameDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

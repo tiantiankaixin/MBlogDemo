@@ -16,6 +16,7 @@
 		206467D92375752200FB3E11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 206467D72375752200FB3E11 /* LaunchScreen.storyboard */; };
 		206467E42375752200FB3E11 /* MMoyaDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206467E32375752200FB3E11 /* MMoyaDemoTests.swift */; };
 		206467EF2375752200FB3E11 /* MMoyaDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206467EE2375752200FB3E11 /* MMoyaDemoUITests.swift */; };
+		206468022376576600FB3E11 /* MCodableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206468012376576600FB3E11 /* MCodableTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		206467EA2375752200FB3E11 /* MMoyaDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMoyaDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		206467EE2375752200FB3E11 /* MMoyaDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMoyaDemoUITests.swift; sourceTree = "<group>"; };
 		206467F02375752200FB3E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		206468012376576600FB3E11 /* MCodableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCodableTest.swift; sourceTree = "<group>"; };
 		25457AA70AE45E0FF9AB63F4 /* Pods_MMoyaDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMoyaDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56DF74D36D1AF9D665FCC30D /* Pods-MMoyaDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMoyaDemo.release.xcconfig"; path = "Target Support Files/Pods-MMoyaDemo/Pods-MMoyaDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FB9BDB2E6D3173BDA49E0DA4 /* Pods-MMoyaDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMoyaDemo.debug.xcconfig"; path = "Target Support Files/Pods-MMoyaDemo/Pods-MMoyaDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				206467CC2375752100FB3E11 /* AppDelegate.swift */,
 				206467CE2375752100FB3E11 /* SceneDelegate.swift */,
 				206467D02375752100FB3E11 /* ViewController.swift */,
+				206468012376576600FB3E11 /* MCodableTest.swift */,
 				206467D22375752100FB3E11 /* Main.storyboard */,
 				206467D52375752200FB3E11 /* Assets.xcassets */,
 				206467D72375752200FB3E11 /* LaunchScreen.storyboard */,
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206468022376576600FB3E11 /* MCodableTest.swift in Sources */,
 				206467D12375752100FB3E11 /* ViewController.swift in Sources */,
 				206467CD2375752100FB3E11 /* AppDelegate.swift in Sources */,
 				206467CF2375752100FB3E11 /* SceneDelegate.swift in Sources */,
