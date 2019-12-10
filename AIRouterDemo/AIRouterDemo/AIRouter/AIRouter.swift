@@ -33,17 +33,22 @@ class AIRouter {
         targetDict.updateValue(target, forKey: key)
     }
     
-    func targetWith(urlStr: String) -> AIRouterProtocol? {
+    func targetWith(urlStr: String, externParameter: [String: Any]? = nil) -> AIRouterProtocol? {
         let encodeUrlStr = urlStr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         if let urlComponents = URLComponents(string: encodeUrlStr) {
             let scheme = urlComponents.scheme ?? ""
             let host = urlComponents.host ?? ""
             let path = urlComponents.path
             //AILog("scheme:\(scheme) host:\(host) path:\(path)")
-            var parameter = [String: String]()
+            var parameter = [String: Any]()
             if let queryItems = urlComponents.queryItems {
                 for query in queryItems {
                     parameter.updateValue(query.value ?? "", forKey: query.name)
+                }
+            }
+            if let externDic = externParameter {
+                for (key, value) in externDic {
+                    parameter.updateValue(value, forKey: key)
                 }
             }
             if scheme == kAppScheme {
@@ -59,7 +64,7 @@ class AIRouter {
         return nil
     }
     
-    func targetWith(key: String, parameter: [String: String]) -> AIRouterProtocol? {
+    func targetWith(key: String, parameter: [String: Any]) -> AIRouterProtocol? {
         if let router = targetDict[key] {
             return router.targetWith(pa: parameter)
         }

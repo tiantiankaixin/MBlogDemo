@@ -32,8 +32,11 @@ class AIRouterManager {
         router.registerRouter(target: NeedLoginViewController.self, key: "needlogin/")
     }
     
-    static func openUrl(urlStr: String) {
-        if let target = AIRouter.share.targetWith(urlStr: urlStr) {
+    /// 处理链接（打开页面/其它处理）
+    /// - Parameter urlStr: 链接
+    /// - Parameter externParameter: 额外参数（一些参数无法放在链接中如block、UIImage等可以放在这里）
+    static func openUrl(urlStr: String, externParameter: [String: Any]? = nil) {
+        if let target = AIRouter.share.targetWith(urlStr: urlStr, externParameter: externParameter) {
             let needLogin = target.needLogin()
             let isPush = target.isPush()
             if let vc = target as? UIViewController {
