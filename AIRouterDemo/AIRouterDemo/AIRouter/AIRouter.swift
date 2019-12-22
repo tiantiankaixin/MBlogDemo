@@ -8,7 +8,7 @@
 
 import UIKit
 
-let kAppScheme = "ArtAIClass"
+let kAppScheme = "airouter"
 private let kHttp = "http,https"
 
 //ArtAIClass://xxxx/xxx?pa=xxx
@@ -56,8 +56,6 @@ class AIRouter {
             } else if kHttp.contains(scheme) {
                 if let target = targetWith(key: host + path, parameter: parameter) {
                     return target
-                } else {
-                    //TODO: 创建个webcontroller
                 }
             }
         }
