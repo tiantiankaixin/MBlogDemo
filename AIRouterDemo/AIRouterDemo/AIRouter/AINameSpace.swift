@@ -14,6 +14,10 @@ extension AINameSpace {
     public var ai: AIWrapper<Self> {
         return AIWrapper(wrapper: self)
     }
+    
+    public static var ai: AIWrapper<Self>.Type {
+        return AIWrapper<Self>.self
+    }
 }
 
 public struct AIWrapper<Wrapper> {
