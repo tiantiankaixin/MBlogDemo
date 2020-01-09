@@ -18,7 +18,7 @@ class WebViewController: UIViewController, AIRouterProtocol {
     static func targetWith(pa: [String : Any]) -> AIRouterProtocol? {
         let web = WebViewController()
         if let url = pa["url"] as? String {
-            AILog("打开链接：\(url.aiBase64Decoding())")
+            AILog("打开链接：\(url.ai.urlDecoding())")
         }
         return web
     }

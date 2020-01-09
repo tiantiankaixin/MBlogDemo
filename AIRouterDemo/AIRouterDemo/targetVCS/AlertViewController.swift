@@ -24,7 +24,7 @@ class AlertViewController: UIAlertController, AIRouterProtocol {
         let alert = AlertViewController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: okTitle, style: .default) { (_) in
             if let urlStr = url {
-                AIRouterManager.openUrl(urlStr: urlStr.aiBase64Decoding())
+                AIRouterManager.openUrl(urlStr: urlStr.ai.urlDecoding())
             }
         }
         let cancelAction = UIAlertAction(title: cancelTitle, style: .cancel)

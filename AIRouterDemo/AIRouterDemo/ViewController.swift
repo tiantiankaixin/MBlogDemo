@@ -37,14 +37,14 @@ class ViewController: UIViewController {
     
     //MARK: 弹窗 -> 点确定后跳转页面
     @IBAction func alertBtnClick(_ sender: Any) {
-        //直接传递链接对参数解析有影响 使用base64编码处理一下
-        let pageUrl = "http://home/?roomId=1".aiBase64Encoding()
+        //直接传递链接对参数解析有影响 encoding一下
+        let pageUrl = "http://home/?roomId=1".ai.urlEncoding()
         let alertUrl = "https://alert/?url=\(pageUrl)&title=提示&message=是否要打开目标页&ok=确定&cancel=取消"
         AIRouterManager.openUrl(urlStr: alertUrl)
     }
     
     @IBAction func openWebPage(_ sender: UIButton) {
-        let webUrl = "www.baidu.com".aiBase64Encoding()
+        let webUrl = "www.baidu.com?pa1=1&pa2=2".ai.urlEncoding()
         let openUrl = "http://web/?url=\(webUrl)"
         AIRouterManager.openUrl(urlStr: openUrl)
     }

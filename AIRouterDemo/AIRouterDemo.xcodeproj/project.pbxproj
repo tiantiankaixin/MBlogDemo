@@ -15,6 +15,7 @@
 		2040B96B239B94430033260B /* AIRouterDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040B96A239B94430033260B /* AIRouterDemoTests.swift */; };
 		2040B976239B94430033260B /* AIRouterDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040B975239B94430033260B /* AIRouterDemoUITests.swift */; };
 		2040B984239B94520033260B /* AIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040B983239B94520033260B /* AIRouter.swift */; };
+		20D84D5F23C7097C00EE45B7 /* AINameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D84D5E23C7097C00EE45B7 /* AINameSpace.swift */; };
 		20DD2629239BA81D000ECA47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DD2628239BA81D000ECA47 /* HomeViewController.swift */; };
 		20DD262B239BBA2D000ECA47 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DD262A239BBA2D000ECA47 /* WebViewController.swift */; };
 		20DD262D239DF704000ECA47 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DD262C239DF704000ECA47 /* AlertViewController.swift */; };
@@ -59,6 +60,7 @@
 		2040B975239B94430033260B /* AIRouterDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIRouterDemoUITests.swift; sourceTree = "<group>"; };
 		2040B977239B94430033260B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2040B983239B94520033260B /* AIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIRouter.swift; sourceTree = "<group>"; };
+		20D84D5E23C7097C00EE45B7 /* AINameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AINameSpace.swift; sourceTree = "<group>"; };
 		20DD2628239BA81D000ECA47 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		20DD262A239BBA2D000ECA47 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		20DD262C239DF704000ECA47 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		20DD2636239E2345000ECA47 /* AINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AINavigationController.swift; sourceTree = "<group>"; };
 		20DD2638239E248B000ECA47 /* PresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentViewController.swift; sourceTree = "<group>"; };
 		20DD263A239E2A45000ECA47 /* NeedLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedLoginViewController.swift; sourceTree = "<group>"; };
+		20DD264823A32CFC000ECA47 /* TestFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFile.h; sourceTree = "<group>"; };
 		2A48E4257CDF9F8D1931182B /* Pods-AIRouterDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRouterDemo.release.xcconfig"; path = "Target Support Files/Pods-AIRouterDemo/Pods-AIRouterDemo.release.xcconfig"; sourceTree = "<group>"; };
 		58997F3A58D7F4B20A0AE922 /* Pods-AIRouterDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRouterDemo.debug.xcconfig"; path = "Target Support Files/Pods-AIRouterDemo/Pods-AIRouterDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		58DAFE1545AE1E5F9B5E4E99 /* libPods-AIRouterDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIRouterDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +146,7 @@
 				2040B95C239B94420033260B /* Assets.xcassets */,
 				2040B95E239B94420033260B /* LaunchScreen.storyboard */,
 				2040B961239B94420033260B /* Info.plist */,
+				20DD264823A32CFC000ECA47 /* TestFile.h */,
 			);
 			path = AIRouterDemo;
 			sourceTree = "<group>";
@@ -168,6 +172,7 @@
 		20DD2630239DFAD6000ECA47 /* AIRouter */ = {
 			isa = PBXGroup;
 			children = (
+				20D84D5E23C7097C00EE45B7 /* AINameSpace.swift */,
 				2040B983239B94520033260B /* AIRouter.swift */,
 				20DD262E239DF922000ECA47 /* AIRouterManager.swift */,
 			);
@@ -357,6 +362,7 @@
 				20DD2632239E1B48000ECA47 /* ViewController1.swift in Sources */,
 				20DD2629239BA81D000ECA47 /* HomeViewController.swift in Sources */,
 				20DD2639239E248B000ECA47 /* PresentViewController.swift in Sources */,
+				20D84D5F23C7097C00EE45B7 /* AINameSpace.swift in Sources */,
 				20DD262D239DF704000ECA47 /* AlertViewController.swift in Sources */,
 				20DD262B239BBA2D000ECA47 /* WebViewController.swift in Sources */,
 				2040B984239B94520033260B /* AIRouter.swift in Sources */,

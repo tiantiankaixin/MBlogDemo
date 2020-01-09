@@ -103,18 +103,30 @@ extension UIViewController {
     }
 }
 
-extension String {
-    func aiBase64Encoding() -> String {
-        if let data = self.data(using: .utf8) {
-            return data.base64EncodedString()
-        }
-        return ""
+extension String: AINameSpace {}
+
+extension AIWrapper where Wrapper == String {
+    func urlEncoding() -> String {
+        let unreservedChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~"
+        let unreservedCharset = CharacterSet(charactersIn: unreservedChars)
+        return wrapper.addingPercentEncoding(withAllowedCharacters: unreservedCharset) ?? wrapper
     }
     
-    func aiBase64Decoding() -> String {
-        if let data = Data(base64Encoded: self) {
+    func urlDecoding() -> String {
+        return wrapper.removingPercentEncoding ?? wrapper
+    }
+    
+    func base64Encoding() -> String {
+        if let data = self.wrapper.data(using: .utf8) {
+            return data.base64EncodedString()
+        }
+        return self.wrapper
+    }
+    
+    func base64Decoding() -> String {
+        if let data = Data(base64Encoded: self.wrapper) {
             return String(data: data, encoding: .utf8) ?? ""
         }
-        return ""
+        return self.wrapper
     }
 }
