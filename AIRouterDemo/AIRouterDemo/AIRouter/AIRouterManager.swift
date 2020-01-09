@@ -75,13 +75,14 @@ extension UIViewController {
     }
     
     static func topViewController(fromVC: UIViewController?) -> UIViewController? {
-        if let navi = fromVC as? UINavigationController {
+        if let presentedVC = fromVC?.presentedViewController {
+            return self.topViewController(fromVC: presentedVC)
+        }
+        else if let navi = fromVC as? UINavigationController {
             return self.topViewController(fromVC: navi.topViewController)
         } else if let tab = fromVC as? UITabBarController {
             return self.topViewController(fromVC: tab.selectedViewController)
-        } else if let presentedVC = fromVC?.presentedViewController {
-            return self.topViewController(fromVC: presentedVC)
-        } else {
+        }  else {
             return fromVC
         }
     }
