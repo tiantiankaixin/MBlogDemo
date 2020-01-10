@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIImageView.ai.imageViewTestFunc()
     }
     
     @IBAction func downloadBtnClick(_ sender: UIButton) {
