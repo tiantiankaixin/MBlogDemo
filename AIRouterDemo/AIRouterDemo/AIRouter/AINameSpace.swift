@@ -12,7 +12,7 @@ public protocol AINameSpace {}
 
 extension AINameSpace {
     public var ai: AIWrapper<Self> {
-        return AIWrapper(wrapper: self)
+        return AIWrapper(self)
     }
     
     public static var ai: AIWrapper<Self>.Type {
@@ -22,4 +22,7 @@ extension AINameSpace {
 
 public struct AIWrapper<Wrapper> {
     let wrapper: Wrapper
+    init(_ wrapper: Wrapper) {
+        self.wrapper = wrapper
+    }
 }

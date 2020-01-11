@@ -25,9 +25,6 @@ extension AICompatible {
 
 struct AIWrapper<Base> {
     public let base: Base
-    static var baseType: Base.Type {
-        return Base.self
-    }
     public init(_ base: Base) {
         self.base = base
     }
@@ -44,7 +41,7 @@ extension AIWrapper where Base: UIImageView {
     }
     
     static func imageViewTestFunc() {
-        print(baseType)
+        print(Base.self)
     }
 }
 
