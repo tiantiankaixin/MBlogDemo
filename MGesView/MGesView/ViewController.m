@@ -10,6 +10,7 @@
 #import "MGesView.h"
 #import "MLClickTimeBtn.h"
 #import <SVGA.h>
+#import "TestViewController1.h"
 
 @interface ViewController ()
 
@@ -33,20 +34,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    SVGAPlayer *player = [[SVGAPlayer alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:player];
-    NSString *urlStr = @"https://gift-resource.starmakerstudios.com/gift/gift_5bab5f59bbad2.svga";
-    [self.parser parseWithURL:[NSURL URLWithString:urlStr] completionBlock:^(SVGAVideoEntity * _Nullable videoItem) {
-        
-        if (videoItem != nil) {
-            player.videoItem = videoItem;
-            [player startAnimation];
-        }
-        
-    } failureBlock:^(NSError * _Nullable error) {
-    
-        
-    }];
 //    UIButton *redBtn = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
 //    [redBtn setBackgroundColor:[UIColor redColor]];
 //    [redBtn addTarget:self action:@selector(redBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
@@ -89,6 +76,12 @@
     NSLog(@"blue btn click");
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    TestViewController1 *vc = [TestViewController1 new];
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

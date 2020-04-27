@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04323CA124124975005B726F /* TestViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 04323CA024124975005B726F /* TestViewController1.m */; };
+		04323CA524124986005B726F /* TestViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 04323CA324124986005B726F /* TestViewController2.m */; };
+		04323CA624124986005B726F /* TestViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04323CA424124986005B726F /* TestViewController2.xib */; };
 		1385D65DD9EA68BDE3F6A888 /* libPods-MGesViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E28D1EFF91649D96AF3892 /* libPods-MGesViewTests.a */; };
 		16E26774815211E4B4A95DD6 /* libPods-MGesView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6F9BD494B48F58BE14CE23 /* libPods-MGesView.a */; };
 		202458D1201045CA00BAA971 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 202458D0201045CA00BAA971 /* AppDelegate.m */; };
@@ -40,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04323C9F24124975005B726F /* TestViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController1.h; sourceTree = "<group>"; };
+		04323CA024124975005B726F /* TestViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController1.m; sourceTree = "<group>"; };
+		04323CA224124986005B726F /* TestViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController2.h; sourceTree = "<group>"; };
+		04323CA324124986005B726F /* TestViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController2.m; sourceTree = "<group>"; };
+		04323CA424124986005B726F /* TestViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController2.xib; sourceTree = "<group>"; };
 		202458CC201045CA00BAA971 /* MGesView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGesView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		202458CF201045CA00BAA971 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		202458D0201045CA00BAA971 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -134,6 +142,11 @@
 				202458D0201045CA00BAA971 /* AppDelegate.m */,
 				202458D2201045CA00BAA971 /* ViewController.h */,
 				202458D3201045CA00BAA971 /* ViewController.m */,
+				04323C9F24124975005B726F /* TestViewController1.h */,
+				04323CA024124975005B726F /* TestViewController1.m */,
+				04323CA224124986005B726F /* TestViewController2.h */,
+				04323CA324124986005B726F /* TestViewController2.m */,
+				04323CA424124986005B726F /* TestViewController2.xib */,
 				202458D5201045CA00BAA971 /* Main.storyboard */,
 				202458D8201045CA00BAA971 /* Assets.xcassets */,
 				202458DA201045CA00BAA971 /* LaunchScreen.storyboard */,
@@ -294,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				202458DC201045CA00BAA971 /* LaunchScreen.storyboard in Resources */,
+				04323CA624124986005B726F /* TestViewController2.xib in Resources */,
 				202458D9201045CA00BAA971 /* Assets.xcassets in Resources */,
 				202458D7201045CA00BAA971 /* Main.storyboard in Resources */,
 			);
@@ -393,7 +407,9 @@
 				204F07CC20F5A0B600413BED /* MLClickTimeBtn.m in Sources */,
 				202458D4201045CA00BAA971 /* ViewController.m in Sources */,
 				202458DF201045CA00BAA971 /* main.m in Sources */,
+				04323CA124124975005B726F /* TestViewController1.m in Sources */,
 				202458D1201045CA00BAA971 /* AppDelegate.m in Sources */,
+				04323CA524124986005B726F /* TestViewController2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
