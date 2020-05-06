@@ -112,6 +112,45 @@ class AIKingfisher {
         }
     }
     
+    /// Kingfisher多图下载
+    /// - Parameter urlStrArray: 图片链接str数组
+    /// - Parameter timeout: 超时时间
+    /// - Parameter complete: 回调
+    static func downloadWith(urlStrArray: [String], timeout: TimeInterval = 10, complete: @escaping (AIKingfisherDownLoadResult?) -> ()) {
+        let group = DispatchGroup()
+        let queue = DispatchQueue.main
+        var imgDic = [String: UIImage]()
+        var downLoadCount = 0
+        for urlStr in urlStrArray {
+            group.enter()
+            queue.async(group: group) {
+                AIKingfisher.downloadWith(urlStr: urlStr) { (image) in
+                    if let img = image {
+                        imgDic.updateValue(img, forKey: urlStr)
+                        downLoadCount = downLoadCount + 1
+                    }
+                    group.leave()
+                }
+            }
+        }
+        DispatchQueue.global().async {
+            let result = group.wait(timeout: DispatchTime.now() + timeout)
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    if downLoadCount != urlStrArray.count {
+                        complete(nil)
+                    } else {
+                        complete(AIKingfisherDownLoadResult(imgDic: imgDic))
+                    }
+                case .timedOut:
+                    print("下载超时")
+                    complete(nil)
+                }
+            }
+        }
+    }
+    
     static func cacheSize(complete: @escaping (_ size: String) -> ()) {
         KingfisherManager.shared.cache.calculateDiskStorageSize { (result) in
             switch result {
