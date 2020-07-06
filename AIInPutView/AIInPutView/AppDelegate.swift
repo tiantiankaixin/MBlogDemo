@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  KingfisherDemo
+//  AIInPutView
 //
-//  Created by mal on 2020/1/9.
+//  Created by mal on 2020/7/6.
 //  Copyright © 2020 mal. All rights reserved.
 //
 
@@ -11,9 +11,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let a = 1.0 / 0.0
         return true
     }
 
