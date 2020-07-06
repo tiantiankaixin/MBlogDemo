@@ -96,6 +96,7 @@ extension AIInputTextView {
     
     private func resignNotifation() {
         if isRegisterNotifation {
+            isRegisterNotifation = false
             NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
             NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
             textView.removeObserver(self, forKeyPath: kContentSizeKeyPath)
