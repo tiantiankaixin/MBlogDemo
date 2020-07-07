@@ -12,7 +12,8 @@ class ViewController: UIViewController {
 
     lazy var inputTextView: AIInputTextView = {
         let view = AIInputTextView.viewWith()
-        view.maxLines = 3
+        view.maxLines = 5
+        view.placeHolder = "我是占位的文本"
         return view
     }()
     
@@ -22,10 +23,6 @@ class ViewController: UIViewController {
     
     @IBAction func onShowInputViewBtnClick(_ sender: UIButton) {
         inputTextView.show(inView: self.view)
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
     }
 }
 

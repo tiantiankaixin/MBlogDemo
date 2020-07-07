@@ -15,6 +15,7 @@
 		0412F97724B356F100303D04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0412F97524B356F100303D04 /* LaunchScreen.storyboard */; };
 		0412F98124B3580C00303D04 /* AIInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412F98024B3580C00303D04 /* AIInputTextView.swift */; };
 		0412F98324B358A300303D04 /* UIView+AI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412F98224B358A300303D04 /* UIView+AI.swift */; };
+		2007BB7D24B4140A00C61C73 /* UIColor+AI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007BB7C24B4140900C61C73 /* UIColor+AI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0412F97824B356F100303D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0412F98024B3580C00303D04 /* AIInputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIInputTextView.swift; sourceTree = "<group>"; };
 		0412F98224B358A300303D04 /* UIView+AI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AI.swift"; sourceTree = "<group>"; };
+		2007BB7C24B4140900C61C73 /* UIColor+AI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		0412F96924B356EF00303D04 /* AIInPutView */ = {
 			isa = PBXGroup;
 			children = (
+				2007BB7C24B4140900C61C73 /* UIColor+AI.swift */,
 				0412F98224B358A300303D04 /* UIView+AI.swift */,
 				0412F98024B3580C00303D04 /* AIInputTextView.swift */,
 				0412F96A24B356EF00303D04 /* AppDelegate.swift */,
@@ -149,6 +152,7 @@
 				0412F98124B3580C00303D04 /* AIInputTextView.swift in Sources */,
 				0412F96D24B356EF00303D04 /* SceneDelegate.swift in Sources */,
 				0412F98324B358A300303D04 /* UIView+AI.swift in Sources */,
+				2007BB7D24B4140A00C61C73 /* UIColor+AI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +298,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AIInPutView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AIInPutView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
