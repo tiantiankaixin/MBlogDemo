@@ -1,14 +1,12 @@
 //
 //  AppDelegate.swift
-//  MRxSwiftDemo
+//  MPushAnimationDemo
 //
-//  Created by mal on 2020/6/10.
+//  Created by mal on 2020/7/6.
 //  Copyright © 2020 mal. All rights reserved.
 //
 
 import UIKit
-
-@_exported import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -67,13 +67,4 @@ class UserManager {
     func loginOut() {
         self.user = nil
     }
-
-    func aiLogin(fromVC: UIViewController, loginComplete: @escaping () -> ()) {
-        if UserIsLogin {
-            loginComplete()
-        } else {
-            let loginVC = LoginViewController(complete: loginComplete)
-            fromVC.aiPushToVC(toVC: loginVC)
-        }
-    }
 }
