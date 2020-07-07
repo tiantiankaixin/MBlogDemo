@@ -12,13 +12,16 @@ class ViewController: UIViewController {
 
     lazy var inputTextView: AIInputTextView = {
         let view = AIInputTextView.viewWith()
-        view.maxLines = 5
+        view.maxLines = 4
         view.placeHolder = "我是占位的文本"
         return view
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        inputTextView.sendTextBlock = {(text) in
+            print("发送的文本是\(text)")
+        }
     }
     
     @IBAction func onShowInputViewBtnClick(_ sender: UIButton) {

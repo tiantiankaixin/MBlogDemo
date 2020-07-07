@@ -21,17 +21,19 @@ private let kTextFont = UIFont.systemFont(ofSize: 20)
 class AIInputTextView: UIView {
     private var isRegisterNotifation = false
     
-    private var textView: UITextView = {
+    private lazy var textView: UITextView = {
         let view = UITextView()
         view.showsVerticalScrollIndicator = false
         view.showsHorizontalScrollIndicator = false
         view.textContainerInset = .zero
         view.font = kTextFont
         view.textColor = .black
+        view.returnKeyType = .send
+        view.delegate = self
         return view
     }()
     
-    private var placeHolderTextView: UITextView = {
+    private lazy var placeHolderTextView: UITextView = {
         let view = UITextView()
         view.showsVerticalScrollIndicator = false
         view.showsHorizontalScrollIndicator = false
@@ -41,14 +43,14 @@ class AIInputTextView: UIView {
         return view
     }()
     
-    private var textContainerView: UIView = {
+    private lazy var textContainerView: UIView = {
         let view = UIView()
         view.ai_setCorner(corner: 6)
         view.ai_addBorder(width: 1, color: .red)
         return view
     }()
     
-    private var bgView: UIControl = {
+    private lazy var bgView: UIControl = {
         let view = UIControl(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight))
         view.addTarget(self, action: #selector(bgViewClick), for: .touchUpInside)
         view.backgroundColor = kBgViewDismissColor
@@ -62,6 +64,8 @@ class AIInputTextView: UIView {
     }
     
     private var maxHeight: CGFloat = 0
+    
+    var sendTextBlock: ((String) -> ())? = nil
     
     var maxLines: Int = 4 {
         willSet {
@@ -83,6 +87,7 @@ class AIInputTextView: UIView {
         dismiss()
         inView.addSubview(bgView)
         inView.addSubview(self)
+        updatePlaceholderShowState()
         registerNotifation()
         textView.becomeFirstResponder()
     }
@@ -91,6 +96,16 @@ class AIInputTextView: UIView {
         bgView.removeFromSuperview()
         resignNotifation()
         removeFromSuperview()
+    }
+    
+    func sendText() {
+        if let text = textView.text, text.isEmpty == false {
+            if let block = sendTextBlock {
+                block(text)
+                textView.text = ""
+                dismiss()
+            }
+        }
     }
     
     private func setUpView() {
@@ -126,7 +141,6 @@ extension AIInputTextView {
             isRegisterNotifation = true
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(noti:)), name: UIResponder.keyboardWillShowNotification, object: nil)
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHidden(noti:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-            NotificationCenter.default.addObserver(self, selector: #selector(textChanged), name: UITextView.textDidChangeNotification, object: nil)
             textView.addObserver(self, forKeyPath: kContentSizeKeyPath, options: .new, context: nil)
         }
     }
@@ -136,7 +150,6 @@ extension AIInputTextView {
             isRegisterNotifation = false
             NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
             NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-            NotificationCenter.default.removeObserver(self, name: UITextView.textDidChangeNotification, object: nil)
             textView.removeObserver(self, forKeyPath: kContentSizeKeyPath)
         }
     }
@@ -184,5 +197,23 @@ extension AIInputTextView {
                 self.updateTextView()
             }
         }
+    }
+}
+
+extension AIInputTextView: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        updatePlaceholderShowState()
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            sendText()
+            return false
+        }
+        return true
+    }
+    
+    func updatePlaceholderShowState() {
+        placeHolderTextView.isHidden = !textView.text.isEmpty
     }
 }
