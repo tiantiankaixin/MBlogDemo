@@ -16,7 +16,7 @@ private let kInputViewWidth: CGFloat = (ScreenWidth - kInputViewHMargin * 2 - kI
 private let kBgViewDismissColor = UIColor(aiHex: 0x000000, alpha: 0.0)
 private let kBgViewShowColor = UIColor(aiHex: 0x000000, alpha: 0.4)
 
-private let kTextFont = UIFont.systemFont(ofSize: 20)
+private let kTextFont = UIFont.systemFont(ofSize: 12)
 
 class AIInputTextView: UIView {
     private var isRegisterNotifation = false
@@ -154,10 +154,6 @@ extension AIInputTextView {
         }
     }
     
-    @objc func textChanged() {
-        placeHolderTextView.isHidden = !textView.text.isEmpty
-    }
-    
     @objc func keyboardWillShow(noti: Notification) {
         let keyboardFrame = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
         let duration = noti.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval
@@ -203,6 +199,9 @@ extension AIInputTextView {
 extension AIInputTextView: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         updatePlaceholderShowState()
+        if textView.check(withMaxinputNum: 2) {
+            print("123123123123123132131")
+        }
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

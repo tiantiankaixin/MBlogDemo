@@ -19,10 +19,15 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="l3S-Js-XoN"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Fts-wS-hkl"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="agZ-Nf-Slg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CYF-e1-mmY"/>
                                 </connections>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="合成 2_00000.png" id="tJL-zW-I1p">
+                                <rect key="frame" x="105" y="404" width="173" height="176"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -34,6 +39,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="d9V-9K-QUe"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vol-pi-Y6m" id="JKp-zb-e3e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,4 +66,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="132.58928571428572"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="合成 2_00000.png" width="186" height="186"/>
+    </resources>
 </document>
