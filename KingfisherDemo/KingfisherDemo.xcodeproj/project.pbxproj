@@ -17,6 +17,7 @@
 		20D84D8423C7256B00EE45B7 /* KingfisherDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D84D8323C7256B00EE45B7 /* KingfisherDemoTests.swift */; };
 		20D84D8F23C7256B00EE45B7 /* KingfisherDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D84D8E23C7256B00EE45B7 /* KingfisherDemoUITests.swift */; };
 		20D84D9E23C7259900EE45B7 /* Kingfisher+AI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D84D9D23C7259900EE45B7 /* Kingfisher+AI.swift */; };
+		BF48442C24CC5A26001860B7 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF48442B24CC5A26001860B7 /* 0.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		20D84D9023C7256B00EE45B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20D84D9D23C7259900EE45B7 /* Kingfisher+AI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kingfisher+AI.swift"; sourceTree = "<group>"; };
 		477B109BDF6D0FA7E94470C9 /* libPods-KingfisherDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KingfisherDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF48442B24CC5A26001860B7 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		20D84D6B23C7256900EE45B7 /* KingfisherDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BF48442B24CC5A26001860B7 /* 0.jpg */,
 				20D84D9C23C7259900EE45B7 /* kf */,
 				20D84D6C23C7256900EE45B7 /* AppDelegate.swift */,
 				20D84D6E23C7256900EE45B7 /* SceneDelegate.swift */,
@@ -270,6 +273,7 @@
 			files = (
 				20D84D7923C7256B00EE45B7 /* LaunchScreen.storyboard in Resources */,
 				20D84D7623C7256B00EE45B7 /* Assets.xcassets in Resources */,
+				BF48442C24CC5A26001860B7 /* 0.jpg in Resources */,
 				20D84D7423C7256900EE45B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

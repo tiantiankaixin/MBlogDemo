@@ -1,9 +1,9 @@
 //
 //  SceneDelegate.swift
-//  MRxSwiftDemo
+//  MFrameworkDemo
 //
-//  Created by mal on 2020/6/10.
-//  Copyright © 2020 mal. All rights reserved.
+//  Created by maliang on 2020/7/20.
+//  Copyright © 2020 maliang. All rights reserved.
 //
 
 import UIKit

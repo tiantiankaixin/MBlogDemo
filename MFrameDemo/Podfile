@@ -1,0 +1,10 @@
+# Uncomment the next line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '10.0'
+
+target 'MFrameDemo' do
+ 
+pod 'Kingfisher', '5.14.0'	
+
+end
