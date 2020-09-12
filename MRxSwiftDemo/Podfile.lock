@@ -1,236 +1,35 @@
 PODS:
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
-    - AFNetworking/NSURLSession
-  - AlicloudFeedback (3.3.8):
-    - AlicloudUT
-    - AlicloudUtils
-  - AlicloudUT (5.2.0.16):
-    - AlicloudUTDID
-  - AlicloudUTDID (1.5.0.91)
-  - AlicloudUtils (1.3.9):
-    - AlicloudUTDID
-  - AliyunOSSiOS (2.10.8)
-  - ArtCommon/ArtUpload (1.0.13.0):
-    - AliyunOSSiOS (~> 2.10.7)
-    - ArtFoundation (= 0.0.8.2)
-  - ArtFoundation (0.0.8.2):
-    - ArtFoundation/AlertView (= 0.0.8.2)
-    - ArtFoundation/AlicloudFeedback (= 0.0.8.2)
-    - ArtFoundation/ArtBaseUI (= 0.0.8.2)
-    - ArtFoundation/ArtClearCache (= 0.0.8.2)
-    - ArtFoundation/ArtCommand (= 0.0.8.2)
-    - ArtFoundation/ArtDB (= 0.0.8.2)
-    - ArtFoundation/ArtJPush (= 0.0.8.2)
-    - ArtFoundation/ArtMediator (= 0.0.8.2)
-    - ArtFoundation/ArtTools (= 0.0.8.2)
-    - ArtFoundation/ArtVendors (= 0.0.8.2)
-    - ArtFoundation/ArtWebJSBridge (= 0.0.8.2)
-    - ArtFoundation/Authorization (= 0.0.8.2)
-    - ArtFoundation/BaseVC (= 0.0.8.2)
-    - ArtFoundation/BlocksKit (= 0.0.8.2)
-    - ArtFoundation/Cryptor (= 0.0.8.2)
-    - ArtFoundation/EmptyView (= 0.0.8.2)
-    - ArtFoundation/FBKVOController (= 0.0.8.2)
-    - ArtFoundation/IQKeyboardManager (= 0.0.8.2)
-    - ArtFoundation/Nib (= 0.0.8.2)
-    - ArtFoundation/NSCategories (= 0.0.8.2)
-    - ArtFoundation/PlayerView (= 0.0.8.2)
-    - ArtFoundation/ProgressHUD (= 0.0.8.2)
-    - ArtFoundation/PullToRefresh (= 0.0.8.2)
-    - ArtFoundation/ReactiveCocoa (= 0.0.8.2)
-    - ArtFoundation/Runtime (= 0.0.8.2)
-    - ArtFoundation/SafeThread (= 0.0.8.2)
-    - ArtFoundation/SAMKeychain (= 0.0.8.2)
-    - ArtFoundation/Timer (= 0.0.8.2)
-    - ArtFoundation/UIUtils (= 0.0.8.2)
-    - ArtFoundation/WebImage (= 0.0.8.2)
-    - ArtFoundation/YYImage (= 0.0.8.2)
-    - ArtFoundation/YYModel (= 0.0.8.2)
-  - ArtFoundation/AlertView (0.0.8.2):
-    - ArtFoundation/UIUtils
-  - ArtFoundation/AlicloudFeedback (0.0.8.2):
-    - AlicloudFeedback (~> 3.3.6)
-  - ArtFoundation/ArtBaseUI (0.0.8.2):
-    - ArtFoundation/AlertView
-    - ArtFoundation/BaseVC
-    - ArtFoundation/EmptyView
-    - ArtFoundation/Nib
-    - ArtFoundation/PlayerView
-    - ArtFoundation/ProgressHUD
-    - ArtFoundation/PullToRefresh
-    - ArtFoundation/UIUtils
-    - ArtFoundation/WebImage
-    - ArtFoundation/YYImage
-  - ArtFoundation/ArtClearCache (0.0.8.2)
-  - ArtFoundation/ArtCommand (0.0.8.2):
-    - YTKNetwork (~> 2.0.4)
-  - ArtFoundation/ArtDB (0.0.8.2):
-    - WCDB (~> 1.0.7)
-  - ArtFoundation/ArtJPush (0.0.8.2):
-    - JPush (~> 3.2.4)
-  - ArtFoundation/ArtMediator (0.0.8.2)
-  - ArtFoundation/ArtTools (0.0.8.2):
-    - ArtFoundation/Authorization
-    - ArtFoundation/Cryptor
-    - ArtFoundation/NSCategories
-    - ArtFoundation/Runtime
-    - ArtFoundation/SafeThread
-  - ArtFoundation/ArtVendors (0.0.8.2):
-    - ArtFoundation/FBKVOController
-  - ArtFoundation/ArtWebJSBridge (0.0.8.2)
-  - ArtFoundation/Authorization (0.0.8.2)
-  - ArtFoundation/BaseVC (0.0.8.2):
-    - ArtFoundation/UIUtils
-  - ArtFoundation/BlocksKit (0.0.8.2):
-    - BlocksKit (~> 2.2.5)
-  - ArtFoundation/Cryptor (0.0.8.2)
-  - ArtFoundation/EmptyView (0.0.8.2):
-    - ArtFoundation/UIUtils
-  - ArtFoundation/FBKVOController (0.0.8.2)
-  - ArtFoundation/IQKeyboardManager (0.0.8.2):
-    - IQKeyboardManager (~> 6.0.6)
-  - ArtFoundation/Nib (0.0.8.2)
-  - ArtFoundation/NSCategories (0.0.8.2)
-  - ArtFoundation/PlayerView (0.0.8.2):
-    - ArtFoundation/ProgressHUD
-  - ArtFoundation/ProgressHUD (0.0.8.2):
-    - ArtFoundation/YYImage
-  - ArtFoundation/PullToRefresh (0.0.8.2):
-    - ArtFoundation/UIUtils
-  - ArtFoundation/ReactiveCocoa (0.0.8.2):
-    - ReactiveCocoa (= 2.5.2)
-  - ArtFoundation/Runtime (0.0.8.2)
-  - ArtFoundation/SafeThread (0.0.8.2)
-  - ArtFoundation/SAMKeychain (0.0.8.2):
-    - SAMKeychain (~> 1.5.2)
-  - ArtFoundation/Timer (0.0.8.2)
-  - ArtFoundation/UIUtils (0.0.8.2):
-    - Masonry (~> 1.0.2)
-  - ArtFoundation/WebImage (0.0.8.2):
-    - ArtFoundation/YYImage
-  - ArtFoundation/YYImage (0.0.8.2)
-  - ArtFoundation/YYModel (0.0.8.2):
-    - YYModel (~> 1.0.4)
-  - ArtLogger/HYLog (0.3.4.2)
-  - ArtLogger/LogManager (0.3.4.2):
-    - ArtCommon/ArtUpload (= 1.0.13.0)
-    - ArtFoundation/ArtCommand (= 0.0.8.2)
-    - SSZipArchive (~> 2.1.3)
-  - BlocksKit (2.2.5):
-    - BlocksKit/All (= 2.2.5)
-  - BlocksKit/All (2.2.5):
-    - BlocksKit/Core
-    - BlocksKit/DynamicDelegate
-    - BlocksKit/MessageUI
-    - BlocksKit/UIKit
-  - BlocksKit/Core (2.2.5)
-  - BlocksKit/DynamicDelegate (2.2.5)
-  - BlocksKit/MessageUI (2.2.5):
-    - BlocksKit/Core
-    - BlocksKit/DynamicDelegate
-  - BlocksKit/UIKit (2.2.5):
-    - BlocksKit/Core
-    - BlocksKit/DynamicDelegate
-  - IQKeyboardManager (6.0.6)
-  - JCore (2.3.2)
-  - JPush (3.2.8):
-    - JCore (< 3.0.0, >= 2.0.0)
-  - Masonry (1.0.2)
-  - ReactiveCocoa (2.5.2):
-    - ReactiveCocoa/UI (= 2.5.2)
-  - ReactiveCocoa/Core (2.5.2):
-    - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.5.2)
-  - ReactiveCocoa/UI (2.5.2):
-    - ReactiveCocoa/Core
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxGesture (3.0.1):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
   - RxSwift (5.1.1)
-  - SAMKeychain (1.5.3)
   - SnapKit (5.0.1)
-  - SQLiteRepairKit (1.2.2):
-    - WCDBOptimizedSQLCipher (~> 1.2.0)
-  - SSZipArchive (2.1.5)
-  - WCDB (1.0.7.5):
-    - SQLiteRepairKit (~> 1.2.0)
-    - WCDBOptimizedSQLCipher (~> 1.2.0)
-  - WCDBOptimizedSQLCipher (1.2.1)
-  - YTKNetwork (2.0.4):
-    - AFNetworking (~> 3.0)
-  - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - ArtLogger/HYLog (= 0.3.4.2)
-  - ArtLogger/LogManager (= 0.3.4.2)
+  - RxGesture (= 3.0.1)
   - RxSwift
   - SnapKit
 
 SPEC REPOS:
-  http://gitlab.meishubao.com/ArtPods/ArtPodRepo.git:
-    - ArtCommon
-    - ArtFoundation
-    - ArtLogger
-    - ReactiveCocoa
-  https://github.com/aliyun/aliyun-specs.git:
-    - AlicloudFeedback
-    - AlicloudUT
-    - AlicloudUTDID
-    - AlicloudUtils
   https://github.com/CocoaPods/Specs.git:
-    - AFNetworking
-    - AliyunOSSiOS
-    - BlocksKit
-    - IQKeyboardManager
-    - JCore
-    - JPush
-    - Masonry
+    - RxCocoa
+    - RxGesture
+    - RxRelay
     - RxSwift
-    - SAMKeychain
     - SnapKit
-    - SQLiteRepairKit
-    - SSZipArchive
-    - WCDB
-    - WCDBOptimizedSQLCipher
-    - YTKNetwork
-    - YYModel
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AlicloudFeedback: 7f82ac0f307d62e1c68ef56512ef531df05283b6
-  AlicloudUT: 6d1cf30d57d096b7e9bb4b069dd0ba6ad59a3338
-  AlicloudUTDID: 5f008f2ac35e3969a5cbf8557ef8d285525be948
-  AlicloudUtils: 66e0ba6ece62d7dd05e9dd95674b2c7811624c2f
-  AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
-  ArtCommon: fdb6a854f23d2a6b31cbe5bd8dd57b66e00f34a1
-  ArtFoundation: a4d4cc0549904b7b4a129398339fa6d520167813
-  ArtLogger: fe2afe159aa663527cad626d6f0df70a0ebc5950
-  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
-  IQKeyboardManager: 6b4ecd3e59cf55a26133d802d4678721d7f88499
-  JCore: e4b7b5c812de08e5b46f698947ae9b585ee81e3f
-  JPush: 8ce888d6dedfa417e90c8b6bc87405a16ce2e699
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  ReactiveCocoa: 469de6527293072e262bb7b8cedb364a97f4128f
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxGesture: a3f8dd6adf078110ed5e1c9c30d09d705a09852e
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
-  SSZipArchive: cefe1364104a0231268a5deb8495bdf2861f52f0
-  WCDB: 8e90babdeb7784c569353a4bd22a66c0a175a882
-  WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
-  YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
-  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: dea2dfba8e180d1832ecd06c914f40e080716bbf
+PODFILE CHECKSUM: 09dca665c0546005f1501bf506849e26f17e392f
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.9.1

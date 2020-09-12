@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let dic = ["test1": "123", "test2": "456"]
+        print("\(dic)")
     }
     
     @IBAction func goToNextBtnClick(_ sender: UIButton) {

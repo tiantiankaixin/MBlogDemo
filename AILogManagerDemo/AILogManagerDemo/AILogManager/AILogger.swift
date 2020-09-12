@@ -9,6 +9,8 @@
 import Foundation
 import CocoaLumberjack
 
+private let kLogPrefix = "AILog"
+
 protocol AILoggerProtocol {
     static func directoryPath() -> String?
     static func logFilesCount() ->  UInt
@@ -42,7 +44,7 @@ class AIDefaultLogger: AILoggerProtocol {
     }
     
     static func directoryPath() -> String? {
-        return AIFileManager.createDirectory(dirName: "AILog", sandBoxType: .inDocument)
+        return AIFileManager.createDirectory(dirName: kLogPrefix + "AILog", sandBoxType: .inDocument)
     }
 }
 
@@ -52,6 +54,6 @@ class AIDownloadLogger: AILoggerProtocol {
     }
     
     static func directoryPath() -> String? {
-        return AIFileManager.createDirectory(dirName: "AIDownloadLog", sandBoxType: .inDocument)
+        return AIFileManager.createDirectory(dirName: kLogPrefix + "AIDownloadLog", sandBoxType: .inDocument)
     }
 }

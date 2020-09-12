@@ -1,10 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 #pod 源
 source 'https://github.com/CocoaPods/Specs.git'
-#私有pod
-source 'http://gitlab.meishubao.com/ArtPods/ArtPodRepo.git'
-#aliyun
-source 'https://github.com/aliyun/aliyun-specs.git'
 
 platform :ios, '10.0'
 
@@ -14,7 +10,6 @@ target 'MRxSwiftDemo' do
 
 pod 'SnapKit'
 pod 'RxSwift'
-pod 'ArtLogger/HYLog', '0.3.4.2', :modular_headers => false
-pod 'ArtLogger/LogManager', '0.3.4.2', :modular_headers => false
+pod 'RxGesture', '3.0.1'
 
 end
