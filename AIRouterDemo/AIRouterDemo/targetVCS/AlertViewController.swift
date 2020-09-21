@@ -35,12 +35,4 @@ class AlertViewController: UIAlertController, AIRouterProtocol {
         }
         return nil
     }
-    
-    func needLogin() -> Bool {
-        return false
-    }
-    
-    func isPush() -> Bool {
-        return false
-    }
 }

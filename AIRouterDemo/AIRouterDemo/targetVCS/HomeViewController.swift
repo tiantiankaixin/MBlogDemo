@@ -33,12 +33,4 @@ class HomeViewController: UIViewController, AIRouterProtocol {
         AILog("参数:\(pa)")
         return home
     }
-    
-    func needLogin() -> Bool {
-        return false
-    }
-    
-    func isPush() -> Bool {
-        return true
-    }
 }

@@ -20,6 +20,16 @@ protocol AIRouterProtocol {
     func isPush() -> Bool
 }
 
+extension AIRouterProtocol {
+    func needLogin() -> Bool {
+        return false
+    }
+    
+    func isPush() -> Bool {
+        return true
+    }
+}
+
 class AIRouter {
     
     var targetDict = [String: AIRouterProtocol.Type]()

@@ -22,12 +22,4 @@ class WebViewController: UIViewController, AIRouterProtocol {
         }
         return web
     }
-    
-    func needLogin() -> Bool {
-        return false
-    }
-    
-    func isPush() -> Bool {
-        return true
-    }
 }

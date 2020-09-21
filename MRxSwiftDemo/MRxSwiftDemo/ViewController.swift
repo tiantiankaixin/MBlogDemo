@@ -18,10 +18,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        test()
-        
-        testTimer()
+        let numbers = [[1, 2], [1, 3]]
+        let mapped = numbers.flatMap { $0 + [1] }
+        print(mapped)
     }
     
     func test() {
@@ -34,6 +33,14 @@ class ViewController: UIViewController {
         }.disposed(by: disposebag)
         
         testTF.rx.text.bind(to: testBtn.rx.title()).disposed(by: disposebag)
+    }
+    
+    func testObserver() {
+        let text = testTF.rx.text.orEmpty.asObservable()
+        let textValid = text.map { (str) -> Bool in
+            return str.count > 6
+        }
+        textValid.subscribeOn(MainScheduler.instance).observeOn(MainScheduler.instance).bind(to: testBtn.rx.isHidden).disposed(by: disposebag)
     }
     
     func testTimer() {
@@ -57,6 +64,10 @@ class ViewController: UIViewController {
 //        }) {
 //            print("释放回调")
 //        }
+    }
+    
+    func testCreatObserverable() {
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

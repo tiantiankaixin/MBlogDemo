@@ -24,8 +24,4 @@ class NeedLoginViewController: UIViewController, AIRouterProtocol {
     func needLogin() -> Bool {
         return true
     }
-    
-    func isPush() -> Bool {
-        return true
-    }
 }

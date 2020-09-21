@@ -38,10 +38,6 @@ class PresentViewController: UIViewController, AIRouterProtocol {
         return home
     }
     
-    func needLogin() -> Bool {
-        return false
-    }
-    
     func isPush() -> Bool {
         return false
     }
