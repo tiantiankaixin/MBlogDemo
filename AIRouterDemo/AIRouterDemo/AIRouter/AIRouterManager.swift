@@ -42,6 +42,8 @@ class AIRouterManager {
             if let vc = target as? UIViewController {
                 self.openVC(vc: vc, needLogin: needLogin, isPush: isPush)
             }
+        } else {
+            AILog("没有找到url = \(urlStr) 对应的target")
         }
     }
     
