@@ -250,6 +250,6 @@ class MFindViewController: UIViewController {
             }
             return newArray
         }
-        return nil;
+        return nil
     }
 }

@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func openWebPage(_ sender: UIButton) {
-        let webUrl = "www.baidu.com?pa1=1&pa2=2".ai.urlEncoding()
+        let webUrl = "www.baidu.com%3fpa1%3d1%26pa2%3d2"
         let openUrl = "http://web/?url=\(webUrl)"
         AIRouterManager.openUrl(urlStr: openUrl)
     }
