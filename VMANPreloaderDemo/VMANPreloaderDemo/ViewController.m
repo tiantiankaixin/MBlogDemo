@@ -6,13 +6,12 @@
 //
 
 #import "ViewController.h"
-#import "CustomPopupView.h"
+#import "VMANVoicePopListView.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UIButton *showPopupButton;
-@property (nonatomic, strong) CustomPopupView *popupView;
-@property (nonatomic, strong) UIView *backgroundView;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIView *sectionHeaderView;
 
 @end
 
@@ -21,31 +20,77 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Create button
-    self.showPopupButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [self.showPopupButton setTitle:@"Show Popup" forState:UIControlStateNormal];
-    self.showPopupButton.frame = CGRectMake(100, 100, 100, 50);
-    [self.showPopupButton addTarget:self action:@selector(showPopup) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.showPopupButton];
-    
-    // Create popup viewi
-    self.popupView = [[CustomPopupView alloc] initWithFrame:CGRectMake(0, 0, 200, 150)];
-    
-    // Add tap gesture recognizer to hide popup
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapOutside:)];
-    [self.view addGestureRecognizer:tapGesture];
-}
-
-- (void)showPopup {
-    [self.popupView showInView:self.view belowButton:self.showPopupButton withOffset:20];
-}
-
-- (void)handleTapOutside:(UITapGestureRecognizer *)sender {
-    CGPoint tapLocation = [sender locationInView:self.view];
-    if (!CGRectContainsPoint(self.popupView.frame, tapLocation)) {
-        [self.popupView hide];
+    // 创建tableView
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    if (@available(iOS 15.0, *)) {
+        self.tableView.sectionHeaderTopPadding = 0;
     }
+    [self.view addSubview:self.tableView];
+    
+    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 150)];
+    tableHeaderView.backgroundColor = [UIColor redColor];
+    self.tableView.tableHeaderView = tableHeaderView;
+    
+    // 创建sectionHeaderView
+    self.sectionHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 60)];
+    self.sectionHeaderView.backgroundColor = [UIColor greenColor];
+    UIButton *languageButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [languageButton setTitle:@"语言" forState:UIControlStateNormal];
+    languageButton.frame = CGRectMake(20, 10, 80, 40); // 调整按钮位置和大小
+    [languageButton addTarget:self action:@selector(languageButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.sectionHeaderView addSubview:languageButton];
+    
+    UIButton *voiceButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [voiceButton setTitle:@"声音" forState:UIControlStateNormal];
+    voiceButton.frame = CGRectMake(CGRectGetMaxX(languageButton.frame) + 20, 10, 80, 40); // 调整按钮位置和大小
+    [voiceButton addTarget:self action:@selector(voiceButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.sectionHeaderView addSubview:voiceButton];
 }
 
+- (void)languageButtonClicked:(UIButton *)sender {
+    [VMANVoicePopListView showWithBelowView:self.sectionHeaderView dataSource:@[@"English", @"Chinese", @"Japnese", @"French"] selectBlock:^(NSString *item) {
+        NSLog(@"%@", item);
+    }];
+}
+
+- (void)voiceButtonClicked:(UIButton *)sender {
+    [VMANVoicePopListView showWithBelowView:self.sectionHeaderView dataSource:@[@"Voice1", @"Voice2", @"Voice3", @"Voice4"] selectBlock:^(NSString *item) {
+        NSLog(@"%@", item);
+    }];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10; // 假设有10个cell
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // 随机生成内容
+    cell.textLabel.text = [NSString stringWithFormat:@"Cell %ld", (long)indexPath.row + 1];
+    
+    return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return self.sectionHeaderView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 60;
+}
 
 @end

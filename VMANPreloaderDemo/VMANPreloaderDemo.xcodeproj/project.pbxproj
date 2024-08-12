@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF21F9A72C3CC9EA008047B2 /* CustomPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21F9A62C3CC9EA008047B2 /* CustomPopupView.m */; };
 		BF8E454E2C379CAC00075806 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8E454D2C379CAC00075806 /* AppDelegate.m */; };
 		BF8E45512C379CAC00075806 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8E45502C379CAC00075806 /* SceneDelegate.m */; };
 		BF8E45542C379CAC00075806 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8E45532C379CAC00075806 /* ViewController.m */; };
@@ -15,11 +14,10 @@
 		BF8E45592C379CAD00075806 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8E45582C379CAD00075806 /* Assets.xcassets */; };
 		BF8E455C2C379CAD00075806 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8E455A2C379CAD00075806 /* LaunchScreen.storyboard */; };
 		BF8E455F2C379CAD00075806 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8E455E2C379CAD00075806 /* main.m */; };
+		BFB597ED2C69B31C006F77E4 /* VMANVoicePopListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB597EC2C69B31C006F77E4 /* VMANVoicePopListView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF21F9A52C3CC9EA008047B2 /* CustomPopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPopupView.h; sourceTree = "<group>"; };
-		BF21F9A62C3CC9EA008047B2 /* CustomPopupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPopupView.m; sourceTree = "<group>"; };
 		BF8E45492C379CAC00075806 /* VMANPreloaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMANPreloaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8E454C2C379CAC00075806 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF8E454D2C379CAC00075806 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,6 +30,8 @@
 		BF8E455B2C379CAD00075806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF8E455D2C379CAD00075806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF8E455E2C379CAD00075806 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFB597EB2C69B31C006F77E4 /* VMANVoicePopListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMANVoicePopListView.h; sourceTree = "<group>"; };
+		BFB597EC2C69B31C006F77E4 /* VMANVoicePopListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMANVoicePopListView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,15 +64,14 @@
 		BF8E454B2C379CAC00075806 /* VMANPreloaderDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BF8E45652C379CD500075806 /* VMANDataPreloader */,
 				BF8E454C2C379CAC00075806 /* AppDelegate.h */,
 				BF8E454D2C379CAC00075806 /* AppDelegate.m */,
 				BF8E454F2C379CAC00075806 /* SceneDelegate.h */,
 				BF8E45502C379CAC00075806 /* SceneDelegate.m */,
 				BF8E45522C379CAC00075806 /* ViewController.h */,
 				BF8E45532C379CAC00075806 /* ViewController.m */,
-				BF21F9A52C3CC9EA008047B2 /* CustomPopupView.h */,
-				BF21F9A62C3CC9EA008047B2 /* CustomPopupView.m */,
+				BFB597EB2C69B31C006F77E4 /* VMANVoicePopListView.h */,
+				BFB597EC2C69B31C006F77E4 /* VMANVoicePopListView.m */,
 				BF8E45552C379CAC00075806 /* Main.storyboard */,
 				BF8E45582C379CAD00075806 /* Assets.xcassets */,
 				BF8E455A2C379CAD00075806 /* LaunchScreen.storyboard */,
@@ -80,13 +79,6 @@
 				BF8E455E2C379CAD00075806 /* main.m */,
 			);
 			path = VMANPreloaderDemo;
-			sourceTree = "<group>";
-		};
-		BF8E45652C379CD500075806 /* VMANDataPreloader */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VMANDataPreloader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,9 +153,9 @@
 			files = (
 				BF8E45542C379CAC00075806 /* ViewController.m in Sources */,
 				BF8E454E2C379CAC00075806 /* AppDelegate.m in Sources */,
-				BF21F9A72C3CC9EA008047B2 /* CustomPopupView.m in Sources */,
 				BF8E455F2C379CAD00075806 /* main.m in Sources */,
 				BF8E45512C379CAC00075806 /* SceneDelegate.m in Sources */,
+				BFB597ED2C69B31C006F77E4 /* VMANVoicePopListView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +312,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,6 +340,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
