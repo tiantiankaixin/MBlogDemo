@@ -10,7 +10,7 @@
 #define Cell_Height 44
 #define KeyWindow [VMANVoicePopListView keyWindow]
 
-@interface VMANVoicePopListView () <UITableViewDataSource, UITableViewDelegate>
+@interface VMANVoicePopListView () <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIView *popupBackgroundView;
 @property (nonatomic, strong) UIView *tableBgView;
@@ -95,6 +95,8 @@
     self.popupBackgroundView = [[UIView alloc] initWithFrame:self.bounds];
     self.popupBackgroundView.backgroundColor = [UIColor clearColor];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss)];
+    tapGesture.cancelsTouchesInView = NO;
+    tapGesture.delegate = self;
     [self.popupBackgroundView addGestureRecognizer:tapGesture];
     
     // 设置弹出tableView的背景视图
@@ -146,4 +148,13 @@
         }
     }];
 }
+
+// 添加手势识别器的代理方法，确保手势不拦截 UITableView 的点击事件
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if ([touch.view isDescendantOfView:self.popupTableView]) {
+        return NO; // 如果点击的是 UITableView 的 cell，则不拦截手势
+    }
+    return YES; // 否则允许手势继续处理
+}
+
 @end
