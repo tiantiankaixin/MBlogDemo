@@ -15,6 +15,8 @@
 		BFB598322C69EFFA006F77E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB598302C69EFFA006F77E4 /* LaunchScreen.storyboard */; };
 		BFB598352C69EFFA006F77E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB598342C69EFFA006F77E4 /* main.m */; };
 		BFB5983D2C69F004006F77E4 /* VMANAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5983C2C69F004006F77E4 /* VMANAlertView.m */; };
+		BFB598402C6C53E9006F77E4 /* UIView+DottedBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5983F2C6C53E9006F77E4 /* UIView+DottedBorder.m */; };
+		BFB598432C6C5846006F77E4 /* VMANGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB598412C6C5846006F77E4 /* VMANGradientButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		BFB598342C69EFFA006F77E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFB5983B2C69F004006F77E4 /* VMANAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMANAlertView.h; sourceTree = "<group>"; };
 		BFB5983C2C69F004006F77E4 /* VMANAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMANAlertView.m; sourceTree = "<group>"; };
+		BFB5983E2C6C53E9006F77E4 /* UIView+DottedBorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+DottedBorder.h"; sourceTree = "<group>"; };
+		BFB5983F2C6C53E9006F77E4 /* UIView+DottedBorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+DottedBorder.m"; sourceTree = "<group>"; };
+		BFB598412C6C5846006F77E4 /* VMANGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMANGradientButton.m; sourceTree = "<group>"; };
+		BFB598422C6C5846006F77E4 /* VMANGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMANGradientButton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,8 @@
 		BFB598212C69EFF9006F77E4 /* VMANAlertViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BFB598422C6C5846006F77E4 /* VMANGradientButton.h */,
+				BFB598412C6C5846006F77E4 /* VMANGradientButton.m */,
 				BFB598222C69EFF9006F77E4 /* AppDelegate.h */,
 				BFB598232C69EFF9006F77E4 /* AppDelegate.m */,
 				BFB598252C69EFF9006F77E4 /* SceneDelegate.h */,
@@ -72,6 +80,8 @@
 				BFB598292C69EFF9006F77E4 /* ViewController.m */,
 				BFB5983B2C69F004006F77E4 /* VMANAlertView.h */,
 				BFB5983C2C69F004006F77E4 /* VMANAlertView.m */,
+				BFB5983E2C6C53E9006F77E4 /* UIView+DottedBorder.h */,
+				BFB5983F2C6C53E9006F77E4 /* UIView+DottedBorder.m */,
 				BFB5982B2C69EFF9006F77E4 /* Main.storyboard */,
 				BFB5982E2C69EFFA006F77E4 /* Assets.xcassets */,
 				BFB598302C69EFFA006F77E4 /* LaunchScreen.storyboard */,
@@ -153,8 +163,10 @@
 			files = (
 				BFB5982A2C69EFF9006F77E4 /* ViewController.m in Sources */,
 				BFB598242C69EFF9006F77E4 /* AppDelegate.m in Sources */,
+				BFB598402C6C53E9006F77E4 /* UIView+DottedBorder.m in Sources */,
 				BFB598352C69EFFA006F77E4 /* main.m in Sources */,
 				BFB5983D2C69F004006F77E4 /* VMANAlertView.m in Sources */,
+				BFB598432C6C5846006F77E4 /* VMANGradientButton.m in Sources */,
 				BFB598272C69EFF9006F77E4 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

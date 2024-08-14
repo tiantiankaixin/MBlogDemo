@@ -68,8 +68,7 @@
     CGFloat buttonHeight = 44;
     CGFloat buttonY = CGRectGetMaxY(titleLabel.frame) + 10;
     CGFloat buttonMargin = 20;
-    
-    UIButton *lastBtn = nil;
+  
     for (int i = 0; i < buttonTitles.count; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
         button.frame = CGRectMake(0, buttonY + i * (buttonHeight + buttonMargin), alertView.frame.size.width, buttonHeight);
