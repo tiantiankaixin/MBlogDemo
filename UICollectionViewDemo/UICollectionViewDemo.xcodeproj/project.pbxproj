@@ -7,40 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF8E454E2C379CAC00075806 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8E454D2C379CAC00075806 /* AppDelegate.m */; };
-		BF8E45512C379CAC00075806 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8E45502C379CAC00075806 /* SceneDelegate.m */; };
-		BF8E45542C379CAC00075806 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8E45532C379CAC00075806 /* ViewController.m */; };
-		BF8E45572C379CAC00075806 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8E45552C379CAC00075806 /* Main.storyboard */; };
-		BF8E45592C379CAD00075806 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8E45582C379CAD00075806 /* Assets.xcassets */; };
-		BF8E455C2C379CAD00075806 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8E455A2C379CAD00075806 /* LaunchScreen.storyboard */; };
-		BF8E455F2C379CAD00075806 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8E455E2C379CAD00075806 /* main.m */; };
-		BFB597ED2C69B31C006F77E4 /* VMANVoicePopListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB597EC2C69B31C006F77E4 /* VMANVoicePopListView.m */; };
-		BFB598472C742617006F77E4 /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB598452C742617006F77E4 /* TestCell.m */; };
-		BFB598482C742617006F77E4 /* TestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB598462C742617006F77E4 /* TestCell.xib */; };
+		BFB598572C75CAAE006F77E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB598562C75CAAE006F77E4 /* AppDelegate.m */; };
+		BFB5985A2C75CAAE006F77E4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB598592C75CAAE006F77E4 /* SceneDelegate.m */; };
+		BFB5985D2C75CAAE006F77E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5985C2C75CAAE006F77E4 /* ViewController.m */; };
+		BFB598602C75CAAE006F77E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB5985E2C75CAAE006F77E4 /* Main.storyboard */; };
+		BFB598622C75CAAF006F77E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB598612C75CAAF006F77E4 /* Assets.xcassets */; };
+		BFB598652C75CAAF006F77E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB598632C75CAAF006F77E4 /* LaunchScreen.storyboard */; };
+		BFB598682C75CAAF006F77E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB598672C75CAAF006F77E4 /* main.m */; };
+		BFB598712C76D67D006F77E4 /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5986F2C76D67D006F77E4 /* TestCell.m */; };
+		BFB598722C76D67D006F77E4 /* TestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB598702C76D67D006F77E4 /* TestCell.xib */; };
+		BFB598752C76D8F4006F77E4 /* VMANCreateRoleAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB598742C76D8F4006F77E4 /* VMANCreateRoleAnimationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF8E45492C379CAC00075806 /* VMANPreloaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMANPreloaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF8E454C2C379CAC00075806 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BF8E454D2C379CAC00075806 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BF8E454F2C379CAC00075806 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		BF8E45502C379CAC00075806 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		BF8E45522C379CAC00075806 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BF8E45532C379CAC00075806 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BF8E45562C379CAC00075806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BF8E45582C379CAD00075806 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF8E455B2C379CAD00075806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BF8E455D2C379CAD00075806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF8E455E2C379CAD00075806 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BFB597EB2C69B31C006F77E4 /* VMANVoicePopListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMANVoicePopListView.h; sourceTree = "<group>"; };
-		BFB597EC2C69B31C006F77E4 /* VMANVoicePopListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMANVoicePopListView.m; sourceTree = "<group>"; };
-		BFB598442C742617006F77E4 /* TestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
-		BFB598452C742617006F77E4 /* TestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCell.m; sourceTree = "<group>"; };
-		BFB598462C742617006F77E4 /* TestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCell.xib; sourceTree = "<group>"; };
+		81307E228F87A9EBD189F791 /* libPods-UICollectionViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UICollectionViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFB598522C75CAAE006F77E4 /* UICollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFB598552C75CAAE006F77E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BFB598562C75CAAE006F77E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BFB598582C75CAAE006F77E4 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		BFB598592C75CAAE006F77E4 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		BFB5985B2C75CAAE006F77E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BFB5985C2C75CAAE006F77E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BFB5985F2C75CAAE006F77E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFB598612C75CAAF006F77E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFB598642C75CAAF006F77E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFB598662C75CAAF006F77E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFB598672C75CAAF006F77E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFB5986E2C76D67D006F77E4 /* TestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
+		BFB5986F2C76D67D006F77E4 /* TestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCell.m; sourceTree = "<group>"; };
+		BFB598702C76D67D006F77E4 /* TestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCell.xib; sourceTree = "<group>"; };
+		BFB598732C76D8F4006F77E4 /* VMANCreateRoleAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMANCreateRoleAnimationView.h; sourceTree = "<group>"; };
+		BFB598742C76D8F4006F77E4 /* VMANCreateRoleAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMANCreateRoleAnimationView.m; sourceTree = "<group>"; };
+		BFB598762C76DC5E006F77E4 /* MyPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BF8E45462C379CAC00075806 /* Frameworks */ = {
+		BFB5984F2C75CAAE006F77E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,80 +52,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BF8E45402C379CAC00075806 = {
+		8DD8E254257F8EFE7C341936 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BF8E454B2C379CAC00075806 /* VMANPreloaderDemo */,
-				BF8E454A2C379CAC00075806 /* Products */,
+				81307E228F87A9EBD189F791 /* libPods-UICollectionViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFB598492C75CAAE006F77E4 = {
+			isa = PBXGroup;
+			children = (
+				BFB598542C75CAAE006F77E4 /* UICollectionViewDemo */,
+				BFB598532C75CAAE006F77E4 /* Products */,
+				8DD8E254257F8EFE7C341936 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		BF8E454A2C379CAC00075806 /* Products */ = {
+		BFB598532C75CAAE006F77E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF8E45492C379CAC00075806 /* VMANPreloaderDemo.app */,
+				BFB598522C75CAAE006F77E4 /* UICollectionViewDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BF8E454B2C379CAC00075806 /* VMANPreloaderDemo */ = {
+		BFB598542C75CAAE006F77E4 /* UICollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BF8E454C2C379CAC00075806 /* AppDelegate.h */,
-				BF8E454D2C379CAC00075806 /* AppDelegate.m */,
-				BF8E454F2C379CAC00075806 /* SceneDelegate.h */,
-				BF8E45502C379CAC00075806 /* SceneDelegate.m */,
-				BF8E45522C379CAC00075806 /* ViewController.h */,
-				BF8E45532C379CAC00075806 /* ViewController.m */,
-				BFB597EB2C69B31C006F77E4 /* VMANVoicePopListView.h */,
-				BFB597EC2C69B31C006F77E4 /* VMANVoicePopListView.m */,
-				BFB598442C742617006F77E4 /* TestCell.h */,
-				BFB598452C742617006F77E4 /* TestCell.m */,
-				BFB598462C742617006F77E4 /* TestCell.xib */,
-				BF8E45552C379CAC00075806 /* Main.storyboard */,
-				BF8E45582C379CAD00075806 /* Assets.xcassets */,
-				BF8E455A2C379CAD00075806 /* LaunchScreen.storyboard */,
-				BF8E455D2C379CAD00075806 /* Info.plist */,
-				BF8E455E2C379CAD00075806 /* main.m */,
+				BFB598552C75CAAE006F77E4 /* AppDelegate.h */,
+				BFB598562C75CAAE006F77E4 /* AppDelegate.m */,
+				BFB598582C75CAAE006F77E4 /* SceneDelegate.h */,
+				BFB598592C75CAAE006F77E4 /* SceneDelegate.m */,
+				BFB5985B2C75CAAE006F77E4 /* ViewController.h */,
+				BFB5985C2C75CAAE006F77E4 /* ViewController.m */,
+				BFB598732C76D8F4006F77E4 /* VMANCreateRoleAnimationView.h */,
+				BFB598742C76D8F4006F77E4 /* VMANCreateRoleAnimationView.m */,
+				BFB5986E2C76D67D006F77E4 /* TestCell.h */,
+				BFB5986F2C76D67D006F77E4 /* TestCell.m */,
+				BFB598702C76D67D006F77E4 /* TestCell.xib */,
+				BFB5985E2C75CAAE006F77E4 /* Main.storyboard */,
+				BFB598612C75CAAF006F77E4 /* Assets.xcassets */,
+				BFB598632C75CAAF006F77E4 /* LaunchScreen.storyboard */,
+				BFB598662C75CAAF006F77E4 /* Info.plist */,
+				BFB598672C75CAAF006F77E4 /* main.m */,
+				BFB598762C76DC5E006F77E4 /* MyPrefixHeader.pch */,
 			);
-			path = VMANPreloaderDemo;
+			path = UICollectionViewDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF8E45482C379CAC00075806 /* VMANPreloaderDemo */ = {
+		BFB598512C75CAAE006F77E4 /* UICollectionViewDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF8E45622C379CAD00075806 /* Build configuration list for PBXNativeTarget "VMANPreloaderDemo" */;
+			buildConfigurationList = BFB5986B2C75CAAF006F77E4 /* Build configuration list for PBXNativeTarget "UICollectionViewDemo" */;
 			buildPhases = (
-				BF8E45452C379CAC00075806 /* Sources */,
-				BF8E45462C379CAC00075806 /* Frameworks */,
-				BF8E45472C379CAC00075806 /* Resources */,
+				BFB5984E2C75CAAE006F77E4 /* Sources */,
+				BFB5984F2C75CAAE006F77E4 /* Frameworks */,
+				BFB598502C75CAAE006F77E4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = VMANPreloaderDemo;
-			productName = VMANPreloaderDemo;
-			productReference = BF8E45492C379CAC00075806 /* VMANPreloaderDemo.app */;
+			name = UICollectionViewDemo;
+			productName = UICollectionViewDemo;
+			productReference = BFB598522C75CAAE006F77E4 /* UICollectionViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BF8E45412C379CAC00075806 /* Project object */ = {
+		BFB5984A2C75CAAE006F77E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					BF8E45482C379CAC00075806 = {
+					BFB598512C75CAAE006F77E4 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = BF8E45442C379CAC00075806 /* Build configuration list for PBXProject "VMANPreloaderDemo" */;
+			buildConfigurationList = BFB5984D2C75CAAE006F77E4 /* Build configuration list for PBXProject "UICollectionViewDemo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -131,59 +143,59 @@
 				en,
 				Base,
 			);
-			mainGroup = BF8E45402C379CAC00075806;
-			productRefGroup = BF8E454A2C379CAC00075806 /* Products */;
+			mainGroup = BFB598492C75CAAE006F77E4;
+			productRefGroup = BFB598532C75CAAE006F77E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF8E45482C379CAC00075806 /* VMANPreloaderDemo */,
+				BFB598512C75CAAE006F77E4 /* UICollectionViewDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BF8E45472C379CAC00075806 /* Resources */ = {
+		BFB598502C75CAAE006F77E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF8E455C2C379CAD00075806 /* LaunchScreen.storyboard in Resources */,
-				BFB598482C742617006F77E4 /* TestCell.xib in Resources */,
-				BF8E45592C379CAD00075806 /* Assets.xcassets in Resources */,
-				BF8E45572C379CAC00075806 /* Main.storyboard in Resources */,
+				BFB598652C75CAAF006F77E4 /* LaunchScreen.storyboard in Resources */,
+				BFB598722C76D67D006F77E4 /* TestCell.xib in Resources */,
+				BFB598622C75CAAF006F77E4 /* Assets.xcassets in Resources */,
+				BFB598602C75CAAE006F77E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BF8E45452C379CAC00075806 /* Sources */ = {
+		BFB5984E2C75CAAE006F77E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF8E45542C379CAC00075806 /* ViewController.m in Sources */,
-				BFB598472C742617006F77E4 /* TestCell.m in Sources */,
-				BF8E454E2C379CAC00075806 /* AppDelegate.m in Sources */,
-				BF8E455F2C379CAD00075806 /* main.m in Sources */,
-				BF8E45512C379CAC00075806 /* SceneDelegate.m in Sources */,
-				BFB597ED2C69B31C006F77E4 /* VMANVoicePopListView.m in Sources */,
+				BFB5985D2C75CAAE006F77E4 /* ViewController.m in Sources */,
+				BFB598572C75CAAE006F77E4 /* AppDelegate.m in Sources */,
+				BFB598712C76D67D006F77E4 /* TestCell.m in Sources */,
+				BFB598682C75CAAF006F77E4 /* main.m in Sources */,
+				BFB5985A2C75CAAE006F77E4 /* SceneDelegate.m in Sources */,
+				BFB598752C76D8F4006F77E4 /* VMANCreateRoleAnimationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BF8E45552C379CAC00075806 /* Main.storyboard */ = {
+		BFB5985E2C75CAAE006F77E4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BF8E45562C379CAC00075806 /* Base */,
+				BFB5985F2C75CAAE006F77E4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		BF8E455A2C379CAD00075806 /* LaunchScreen.storyboard */ = {
+		BFB598632C75CAAF006F77E4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BF8E455B2C379CAD00075806 /* Base */,
+				BFB598642C75CAAF006F77E4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -191,7 +203,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BF8E45602C379CAD00075806 /* Debug */ = {
+		BFB598692C75CAAF006F77E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -252,7 +264,7 @@
 			};
 			name = Debug;
 		};
-		BF8E45612C379CAD00075806 /* Release */ = {
+		BFB5986A2C75CAAF006F77E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -307,7 +319,7 @@
 			};
 			name = Release;
 		};
-		BF8E45632C379CAD00075806 /* Debug */ = {
+		BFB5986C2C75CAAF006F77E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -315,27 +327,28 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8VGDP5336E;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/UICollectionViewDemo/MyPrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VMANPreloaderDemo/Info.plist;
+				INFOPLIST_FILE = UICollectionViewDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mal.VMANPreloaderDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mal.test.UICollectionViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		BF8E45642C379CAD00075806 /* Release */ = {
+		BFB5986D2C75CAAF006F77E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -343,20 +356,21 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8VGDP5336E;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/UICollectionViewDemo/MyPrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VMANPreloaderDemo/Info.plist;
+				INFOPLIST_FILE = UICollectionViewDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mal.VMANPreloaderDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mal.test.UICollectionViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -366,25 +380,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF8E45442C379CAC00075806 /* Build configuration list for PBXProject "VMANPreloaderDemo" */ = {
+		BFB5984D2C75CAAE006F77E4 /* Build configuration list for PBXProject "UICollectionViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BF8E45602C379CAD00075806 /* Debug */,
-				BF8E45612C379CAD00075806 /* Release */,
+				BFB598692C75CAAF006F77E4 /* Debug */,
+				BFB5986A2C75CAAF006F77E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF8E45622C379CAD00075806 /* Build configuration list for PBXNativeTarget "VMANPreloaderDemo" */ = {
+		BFB5986B2C75CAAF006F77E4 /* Build configuration list for PBXNativeTarget "UICollectionViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BF8E45632C379CAD00075806 /* Debug */,
-				BF8E45642C379CAD00075806 /* Release */,
+				BFB5986C2C75CAAF006F77E4 /* Debug */,
+				BFB5986D2C75CAAF006F77E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BF8E45412C379CAC00075806 /* Project object */;
+	rootObject = BFB5984A2C75CAAE006F77E4 /* Project object */;
 }

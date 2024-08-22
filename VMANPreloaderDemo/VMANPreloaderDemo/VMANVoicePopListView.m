@@ -9,6 +9,7 @@
 
 #define Cell_Height 44
 #define KeyWindow [VMANVoicePopListView keyWindow]
+#define kDuration 0.1
 
 @interface VMANVoicePopListView () <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
@@ -59,14 +60,16 @@
             popTableViewHeight = popTableViewMaxHeight;
         }
         
-        self.popupTableView.frame = CGRectMake(popTableViewX, popTableViewY, popTableViewWidth, 0);
+        self.popupTableView.frame = CGRectMake(popTableViewX, popTableViewY, popTableViewWidth, popTableViewHeight);
+        self.popupTableView.alpha = 0.0;
         self.tableBgView.frame = CGRectMake(0, popTableViewY, self.bounds.size.width, popTableViewMaxHeight + margin);
         self.tableBgView.alpha = 0.0;
         [KeyWindow addSubview:self];
         
-        [UIView animateWithDuration:0.5 animations:^{
+        [UIView animateWithDuration:kDuration animations:^{
             self.tableBgView.alpha = 1.0;
-            self.popupTableView.frame = CGRectMake(popTableViewX, popTableViewY, popTableViewWidth, popTableViewHeight);
+            //self.popupTableView.frame = CGRectMake(popTableViewX, popTableViewY, popTableViewWidth, popTableViewHeight);
+            self.popupTableView.alpha = 1.0;
         }];
     }
 }
@@ -76,7 +79,7 @@
 }
 
 - (void)dismissWithComplete:(nullable void(^)(void))complete {
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:kDuration animations:^{
         CGRect frame = self.popupTableView.frame;
         frame.size.height = 0;
         self.popupTableView.frame = frame;
