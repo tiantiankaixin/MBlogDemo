@@ -307,13 +307,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YMLHYSK6LD;
 				INFOPLIST_FILE = AIInPutView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AIInPutView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liang.cn.WriteDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AIInPutView/AIInPutView-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "AIInputView-Swift.h";
@@ -329,13 +330,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YMLHYSK6LD;
 				INFOPLIST_FILE = AIInPutView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AIInPutView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liang.cn.WriteDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AIInPutView/AIInPutView-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "AIInputView-Swift.h";

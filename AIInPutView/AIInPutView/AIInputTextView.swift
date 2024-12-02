@@ -199,9 +199,9 @@ extension AIInputTextView {
 extension AIInputTextView: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         updatePlaceholderShowState()
-        if textView.check(withMaxinputNum: 2) {
-            print("123123123123123132131")
-        }
+//        if textView.check(withMaxinputNum: 2) {
+//            print("123123123123123132131")
+//        }
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
