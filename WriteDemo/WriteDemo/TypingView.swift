@@ -8,11 +8,21 @@
 import UIKit
 
 class TypingView: UIView {
-    private let textView = TypeTextView()
+    private lazy var scrollView: UIScrollView = {
+        let scro = UIScrollView()
+        return scro
+    }()
+    private lazy var textLB: UILabel = {
+        let lb = UILabel()
+        lb.numberOfLines = 0
+        lb.textColor = .systemPink
+        return lb
+    }()
+    
     private var displayLink: CADisplayLink?
     private var fullText: String = ""
     private var currentIndex: Int = 0
-    private var typingSpeed: Double = 0.1 // 每个字的间隔时间，单位秒
+    private var typingSpeed: Double = 0.05 // 每个字的间隔时间，单位秒
     private var lineBreakPause: Double = 0.5 // 换行符停顿时间，单位秒
     private var lastUpdateTime: CFTimeInterval = 0
     private var lineSpacing: CGFloat = 4.0 // 行间距
@@ -21,38 +31,31 @@ class TypingView: UIView {
     private var isScrollEnabled: Bool = false // 是否启用滚动
 
     var maxHeight: CGFloat = 200 // 设置最大高度
+    var skip: Bool = false
 
     init(frame: CGRect, speed: Double = 0.1, lineBreakPause: Double = 0.5, lineSpacing: CGFloat = 4.0) {
         super.init(frame: frame)
         self.typingSpeed = speed
         self.lineBreakPause = lineBreakPause
         self.lineSpacing = lineSpacing
-        setupTextView()
+        setupView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupTextView() {
-        textView.frame = bounds
-        textView.font = UIFont.systemFont(ofSize: 18)
-        textView.isEditable = false
-        textView.isScrollEnabled = false // 初始禁止滚动
-        textView.contentInset = .zero
-        textView.textContainerInset = .zero
-        textView.backgroundColor = .clear
-        addSubview(textView)
-        
-        textView.contentSizeChangeBlock = { [weak self] in
-            self?.scrollToCurrentLine()
-        }
+    private func setupView() {
+        self.backgroundColor = .red
+        scrollView.backgroundColor = .clear
+        textLB.backgroundColor = .black
+        scrollView.addSubview(textLB)
+        addSubview(scrollView)
     }
     
     /// 开始打印文本
     func startTyping() {
         guard !isTyping else { return }
-        currentIndex = 0
         lastUpdateTime = CACurrentMediaTime()
         displayLink = CADisplayLink(target: self, selector: #selector(updateText))
         displayLink?.add(to: .main, forMode: .default)
@@ -80,6 +83,10 @@ class TypingView: UIView {
             return
         }
         
+        if skip {
+            return
+        }
+        
         let currentTime = CACurrentMediaTime()
         let elapsedTime = currentTime - lastUpdateTime
         
@@ -98,15 +105,70 @@ class TypingView: UIView {
         
         // 更新富文本
         let currentText = String(fullText.prefix(currentIndex))
-        updateAttributedText(with: currentText)
+        let attStr = attributedText(with: currentText)
         
-        // 根据内容动态调整高度
-        if !isScrollEnabled {
-            adjustHeightUsingAttributedText()
+        skip = true
+        adjustHeightUsingAttributedText(attributedText: attStr) { [weak self] in
+            self?.textLB.attributedText = attStr
+            self?.skip = false
         }
     }
     
-    private func updateAttributedText(with text: String) {
+    /// 根据富文本内容动态调整高度
+    private func adjustHeightUsingAttributedText(attributedText: NSAttributedString, complete:@escaping () -> ()) {
+        let renderTextHeight = attributedText.ml_height(for: CGRectGetWidth(self.frame))
+        if renderTextHeight <= maxHeight {
+            updateFrameWithNewHeight(renderTextHeight, complete: complete)
+        }  else {
+            updateContent(height: renderTextHeight, complete: complete)
+        }
+    }
+    
+    //MARK: 更新高度
+    private func updateFrameWithNewHeight(_ height: CGFloat, complete:@escaping () -> ()) {
+        let oldHeight = CGRectGetHeight(self.frame)
+        if oldHeight > height {
+            complete()
+            return
+        }
+        self.scrollView.contentSize = CGSize(width: 0, height: height)
+        let changeHeight = height - oldHeight
+        displayLink?.isPaused = true // 暂停动画
+        UIView.animate(withDuration: 0.5) {
+            var frame = self.frame
+            frame.size.height = height
+            frame.origin.y = frame.origin.y - changeHeight
+            self.frame = frame
+        } completion: { result in
+            self.scrollView.frame = self.bounds
+            self.textLB.frame = self.bounds
+            complete()
+            self.displayLink?.isPaused = false // 暂停动画
+        }
+    }
+    
+    private func updateContent(height: CGFloat, complete:@escaping () -> ()) {
+        let oldHeight = scrollView.contentSize.height
+        if height > oldHeight {
+            scrollView.contentSize = CGSize(width: 0, height: height)
+            let changeHeight = height - oldHeight
+            let newPoint = CGPoint(x: 0, y: self.scrollView.contentOffset.y + changeHeight)
+            displayLink?.isPaused = true // 暂停动画
+            UIView.animate(withDuration: 0.3) {
+                self.scrollView.setContentOffset(newPoint, animated: false)
+            } completion: { result in
+                var lbFrame = self.textLB.frame
+                lbFrame.size.height = height
+                self.textLB.frame = lbFrame
+                complete()
+                self.displayLink?.isPaused = false // 暂停动画
+            }
+        } else {
+            complete()
+        }
+    }
+    
+    private func attributedText(with text: String) -> NSAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = lineSpacing
         
@@ -116,57 +178,7 @@ class TypingView: UIView {
         ]
         
         let attributedString = NSAttributedString(string: text, attributes: attributes)
-        textView.attributedText = attributedString
-    }
-    
-    /// 根据富文本内容动态调整高度
-    private func adjustHeightUsingAttributedText() {
-        guard let attributedText = textView.attributedText else { return }
-        let renderTextHeight = attributedText.ml_height(for: CGRectGetWidth(textView.frame))
-        
-        let targetHeight = min(renderTextHeight, maxHeight)
-        if targetHeight > currentHeight {
-            // 高度更新动画
-            displayLink?.isPaused = true // 暂停动画
-            let changeHeight = targetHeight - currentHeight
-            UIView.animate(withDuration: 0.3) {
-                self.currentHeight = targetHeight
-                var frame = self.frame
-                frame.origin.y = frame.origin.y - changeHeight
-                frame.size.height = self.currentHeight
-                self.frame = frame
-                
-                self.textView.frame = self.bounds
-            } completion: { result in
-                self.displayLink?.isPaused = false // 暂停动画
-            }
-        }
-        
-        if currentHeight == maxHeight {
-            // 达到最大高度，切换到滚动模式
-            print("开始出问题啦")
-            self.textView.contentSize = CGSize(width: 0, height: CGRectGetHeight(self.frame))
-            isScrollEnabled = true
-            textView.isScrollEnabled = true
-        }
-    }
-    
-    private func scrollToCurrentLine() {
-        guard isScrollEnabled else { return }
-        
-        print("scrollToCurrentLine")
-        
-        displayLink?.isPaused = true // 暂停动画
-        UIView.animate(
-            withDuration: 0.3,
-            animations: {
-                let lastRange = NSRange(location: self.textView.text.count - 1, length: 1)
-                self.textView.scrollRangeToVisible(lastRange)
-            },
-            completion: { [weak self] _ in
-                self?.displayLink?.isPaused = false // 恢复动画
-            }
-        )
+        return attributedString
     }
     
     deinit {

@@ -22,7 +22,7 @@ class ViewController: UIViewController {
             speed: 0.05, // 每个字的打印间隔（秒）
             lineBreakPause: 0.3 // 遇到换行符的额外停顿时间（秒）
         )
-        typingView.backgroundColor = .white
+        typingView.backgroundColor = .red
         view.addSubview(typingView)
         typingView.startTyping()
         print("开始了....2")
@@ -37,12 +37,7 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //present(Test1(), animated: true)
-        let str1 = "司法解释两地分居塑料袋飞机上拉法基手打拉法基说法了三大理发收垃圾代发垃圾1"
-        let str2 = "烦死了党风建设咯inn你那拿不拿不拿，不能不吃，吃吧，女，你，ff保持，女粗暴你，，你，你，你，你，胜多负少防守打法"
-        let str3 = "比较轻😁理解法律手段就分手了电极法就发了解决29734923749273942739492479274274932472749234"
-        let str4 = "fsdfsfsfsfsfsfsdfsfsdfsdfsfsdfsdfsfsfsfsfsfsfsfsdf00000000"
-        let textArray = [str1, str2, str3, str4]
-        let text = textArray.joined(separator: "\n")
+        let text = "左目: 扇形二重まぶた\n右目: 扇形二重まぶた\n目の下のたるみ検出結果: 目の下にたるみがない\n黒眼袋検出結果: 黒眼袋なし\nおでこのしわ検出結果: おでこのしわなし\n目尻のしわ検出結果: 目尻のしわなし\n目元の細かいしわ検出結果: 目元の細かいしわなし\n眉間のしわ検出結果: 眉間のしわなし\nほうれい線検出結果: ほうれい線なし\n肌質検出結果: 普通肌\n額の毛穴検出結果: 毛穴が目立たない\n左頬の毛穴検出結果: 毛穴が目立たない\n右頬の毛穴検出結果: 毛穴が目立たない\n顎の毛穴検出結果: 毛穴が目立たない\n黒ずみ検出結果: 黒ずみなし\nニキビ検出結果: ニキビなし\nほくろ検出結果: ほくろなし\nシミ検出結果: シミなし\n • 三庭の比率：0.34:0.32:0.34\n • 上庭の長さ（单位：mm）：67.37\n • 上庭の割合：0.34\n • 上庭の判定結果：上庭标准\n • 中庭の長さ（单位：mm）：63.68\n • 中庭の割合：0.32\n • 中庭の判定結果：中庭標準\n • 下庭の長さ（单位：mm）：67.37\n • 下庭の割合：0.34\n • 下庭の判定結果"
         
         self.typeView?.appendText(text)
     }
